@@ -21,7 +21,7 @@ import org.springframework.web.context.WebApplicationContext;
 		locations= {"file:src/main/webapp/WEB-INF/spring/**/*.xml"})
 public class SampleTestController {
 	private static final Logger logger=
-			LoggerFactory.getLogger(
+	  		LoggerFactory.getLogger(
 					SampleTestController.class);
 	@Inject
 	private WebApplicationContext wac;
