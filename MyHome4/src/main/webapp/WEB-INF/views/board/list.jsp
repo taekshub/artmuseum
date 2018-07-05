@@ -32,7 +32,112 @@
     <![endif]-->
 </head>
 
-<body class="admin" lang="en">
+<style>
+body {
+	background-color: #ffe6e6;
+}
+</style>
+
+
+<body>
+
+	<!-- START: header -->
+	<header role="banner" class="probootstrap-header">
+
+		<div class="container-fluid">
+			<a href="/myhome1/home.html" class="probootstrap-logo">Art Museum
+				미술관<span>.</span>
+			</a> <a href="#" class="probootstrap-burger-menu visible-xs"><i>Menu</i></a>
+			<div class="mobile-menu-overlay"></div>
+
+			<nav role="navigation" class="probootstrap-nav hidden-xs">
+				<ul class="probootstrap-main-nav">
+					<li><a href="/myhome1/home.mt">메인</a></li>
+					<li><a href="/myhome1/about.mt">소개</a></li>
+					<li><a href="/myhome1/museum.mt">미술관</a></li>
+					<li><a href="/myhome1/artwork.mt">작품</a></li>
+					<li><a href="/myhome1/schedule.mt">전시일정</a></li>
+					<li class="active"><a href="/myhome1/board/list.mt">게시판</a></li>
+					<li><a href="/myhome1/contact.mt">연락</a></li>
+				</ul>
+				<div class="extra-text visible-xs">
+					<a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
+					<h5>Social</h5>
+					<ul class="social-buttons">
+						<li><a href="#"><i class="icon-twitter"></i></a></li>
+						<li><a href="#"><i class="icon-facebook"></i></a></li>
+						<li><a href="#"><i class="icon-instagram2"></i></a></li>
+					</ul>
+					<p>
+						<small>&copy; Copyright 2017 uiCookies:Format. All Rights
+							Reserved.</small>
+					</p>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!-- END: header -->
+
+	<!-- login -->
+	<section class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box">
+					<!--					<div class="box-header with-border">
+ 
+						<h3 class="box-title">Home Page</h3>
+					</div>
+				</div>
+
+				<div class="box" />
+				<a href="/myhome1/board/list.mt">게시판</a>
+			</div> -->
+					</br> </br> </br>
+					<c:if test="${email==null || email==''}">
+						<div class="box" />
+						<a href="/myhome1/member/logon.mt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;로그인</a>
+				</div>
+				&nbsp;&nbsp;
+				<div class="box" />
+				<a href="/myhome1/member/member_write.mt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;회원가입</a>
+			</div>
+			</c:if>
+
+			<c:if test="${email!=null && email!=''}">
+				<%-- 			이름 : ${username} <br>
+			이메일 : ${email} <br>
+			모바일 : ${mobile} <br>
+ --%>
+ 			   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;아이디 : ${member_id} <br>
+				<div class="box" />
+				<a href="/myhome1/member/logout.mt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;로그아웃</a>
+		</div>
+		</c:if>
+		</div>
+	</section>
+
+	<!-- login -->
+
+
+
+
+
+	<!-- nav S -->
+	<div id="nav">
+
+		<ul>
+			<li class="on"><a href="#">공지사항</a></li>
+			<li class="off"><a href="#">자유게시판</a></li>
+		</ul>
+
+	</div>
+	<!-- nav E -->
+
+
+
+
+
+
 	<form name="mform" id="mform">
 		<input type="hidden" name="pg" value="<%=pg%>" id="pg" /> <input
 			type="hidden" name="mode" id="mode" /> <input type="hidden"
@@ -40,8 +145,6 @@
 
 		<!-- site align S -->
 		<div class="sa">
-
-			<%@include file="../include/header.jsp"%>
 
 
 			<!-- section S -->
@@ -195,26 +298,26 @@
 		<!-- site align E -->
 
 	</form>
-</body>
 
-<!-- START: footer -->
-<footer role="contentinfo" class="probootstrap-footer">
-	<div class="container">
-		<div class="row mt40">
-			<div class="col-md-12 text-center">
-				<p>
-					<small>&copy; 2018 <a href="https://uicookies.com/"
-						target="_blank">Art Museum 미술관</a>. All Rights Reserved. <br>
-						Designed &amp; Developed by <a href="https://uicookies.com/"
-						target="_blank">Sungtaek</a> Demo Images: Unsplash
-					</small><br> <a href="#" class="js-backtotop">Back to top</a>
-				</p>
+
+	<!-- START: footer -->
+	<footer role="contentinfo" class="probootstrap-footer">
+		<div class="container">
+			<div class="row mt40">
+				<div class="col-md-12 text-center">
+					<p>
+						<small>&copy; 2018 <a href="https://uicookies.com/"
+							target="_blank">Art Museum 미술관</a>. All Rights Reserved. <br>
+							Designed &amp; Developed by <a href="https://uicookies.com/"
+							target="_blank">Sungtaek</a> Demo Images: Unsplash
+						</small><br> <a href="#" class="js-backtotop">Back to top</a>
+					</p>
+				</div>
 			</div>
 		</div>
-	</div>
-</footer>
-<!-- END: footer -->
-
+	</footer>
+	<!-- END: footer -->
+</body>
 </html>
 
 <script>
