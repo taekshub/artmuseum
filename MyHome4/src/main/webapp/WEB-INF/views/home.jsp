@@ -12,6 +12,8 @@
 <meta name="keywords"
 	content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
 
+<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500"
+	rel="stylesheet">
 <link rel="stylesheet" href="/myhome1/resources/css/styles-merged.css">
 <link rel="stylesheet" href="/myhome1/resources/css/style.min.css">
 <link rel="stylesheet" href="/myhome1/resources/css/custom.css">

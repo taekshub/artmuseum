@@ -10,7 +10,7 @@ Style Sheet
 /**********************************************************************
 @ admin
 **********************************************************************/
-body	{ text-align:center; }
+body	{ text-align:left; }
 .sa	{ position:relative; width:1183px; padding:0 10px; margin:0 auto; text-align:left; }
 
 #header	{ width:100%; float:left; }

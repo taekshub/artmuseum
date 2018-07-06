@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html;charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <%@page import="java.util.*"%>
 <%@page import="com.multi.myhome1.board.dto.*"%>
 <%@page import="com.multi.myhome1.common.*"%>
@@ -45,7 +46,7 @@ body {
 	<header role="banner" class="probootstrap-header">
 
 		<div class="container-fluid">
-			<a href="/myhome1/home.html" class="probootstrap-logo">Art Museum
+			<a href="/myhome1/home.mt" class="probootstrap-logo">Art Museum
 				미술관<span>.</span>
 			</a> <a href="#" class="probootstrap-burger-menu visible-xs"><i>Menu</i></a>
 			<div class="mobile-menu-overlay"></div>
