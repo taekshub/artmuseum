@@ -12,12 +12,16 @@
 			type="com.multi.myhome1.score.dto.ScoreDto" />
 		<typeAlias alias="MemberDto"
 			type="com.multi.myhome1.member.dto.MemberDto" />
+		<typeAlias alias="ArtworkDto"
+			type="com.multi.myhome1.artwork.dto.ArtworkDto" />
+
 	</typeAliases>
 
 	<mappers>
 		<mapper resource="/com/multi/myhome1/board/data/Board.xml" />
 		<mapper resource="/com/multi/myhome1/score/data/Score.xml" />
 		<mapper resource="/com/multi/myhome1/member/data/Member.xml" />
+		<mapper resource="/com/multi/myhome1/artwork/data/Artwork.xml" />
 	</mappers>
 
 </configuration>

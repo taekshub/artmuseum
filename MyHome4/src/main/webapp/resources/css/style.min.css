@@ -215,7 +215,24 @@ a:active, a:focus, a:hover {
 .probootstrap-main-nav li a {
 	padding: 10px 0;
 	color: #914747;
-	border-bottom: 2px solid transparent
+	text-align: center;
+	position: relative;
+	border-bottom: 2px solid transparent;
+	
+}
+
+.probootstrap-main-nav li ul {
+	display: none;
+	padding: 10px 0;
+	color: #914747;
+	text-align: center;
+	position: absolute;
+	border-bottom: 2px solid transparent;
+}
+
+.probootstrap-main-nav li:hover ul {
+	text-align: center;
+	display: block; /* 마우스 커서 올리면 서브메뉴 보이게 하기 */
 }
 
 /* 메뉴 글자 강조 줄 */

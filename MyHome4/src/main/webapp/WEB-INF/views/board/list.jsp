@@ -318,7 +318,9 @@ body {
 		</div>
 	</footer>
 	<!-- END: footer -->
+	
 </body>
+
 </html>
 
 <script>

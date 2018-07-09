@@ -141,8 +141,8 @@ public class BoardController {
 		model.addAttribute("resultDto", resultDto);
 		model.addAttribute("filemap", map);
 		//jsp단에서는 
-		//BoardDto dto = 
-		//  (BoardDto)request.getAttribute("resultDto")
+		//ArtworkDto dto = 
+		//  (ArtworkDto)request.getAttribute("resultDto")
 		
 	}
 

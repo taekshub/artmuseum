@@ -63,7 +63,7 @@
 			<exclude-mapping path="/home.mt" />
 			<exclude-mapping path="/about.mt" />
 			<exclude-mapping path="/museum.mt" />
-			<exclude-mapping path="/artwork.mt" />
+			<exclude-mapping path="/artwork/list.mt" />
 			<exclude-mapping path="/schedule.mt" />
 			<exclude-mapping path="/contact.mt" />
 			<exclude-mapping path="/board/list.mt" />

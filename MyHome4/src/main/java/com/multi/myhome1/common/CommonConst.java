@@ -1,11 +1,14 @@
 package com.multi.myhome1.common;
 
-//°øÅë »ó¼öµé 
+//ê³µí†µ ìƒìˆ˜ë“¤ 
 public final class CommonConst {
-	//Å¬·¡½º ¾Õ¿¡ finalÀ» ºÙÀÌ¸é »ó¼ÓºÒ°¡ Å¬·¡½º
-	//»ìÂ¦ ¸Ş¸ğ¸® Àı¾à 
+	//í´ë˜ìŠ¤ ì•ì— finalì„ ë¶™ì´ë©´ ìƒì†ë¶ˆê°€ í´ë˜ìŠ¤
+	//ì‚´ì§ ë©”ëª¨ë¦¬ ì ˆì•½ 
 	public static final String 
 	                BOARD_PATH="/upload/board";
 	public static final String 
     	            MEMBER_PATH="/upload/member";
+	public static final String 
+    				ARTWORK_PATH="/upload/artwork";
+
 }
