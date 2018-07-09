@@ -220,14 +220,20 @@ a:active, a:focus, a:hover {
 	border-bottom: 2px solid transparent;
 	
 }
-
+/*#914747*/
 .probootstrap-main-nav li ul {
 	display: none;
 	padding: 10px 0;
 	color: #914747;
+	width: 600px; 
 	text-align: center;
 	position: absolute;
 	border-bottom: 2px solid transparent;
+	
+}
+
+.probootstrap-main-nav li ul li {
+	float:left;
 }
 
 .probootstrap-main-nav li:hover ul {
