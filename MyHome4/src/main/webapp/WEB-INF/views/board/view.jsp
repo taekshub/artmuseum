@@ -31,8 +31,6 @@ BoardDto nextDto = (BoardDto)request.getAttribute("nextDto");
 <div class="sa">
 
 	<%@include file="../include/header.jsp"%>
-
-	<%@include file="../include/left.jsp"%>
 	
 
 	<!-- section S -->

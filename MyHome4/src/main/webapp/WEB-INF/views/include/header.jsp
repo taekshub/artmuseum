@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html;charset=utf-8"
-	pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html;charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
@@ -28,22 +27,30 @@ body {
 </style>
 <body>
 
-	<!-- header S -->
 	<header role="banner" class="probootstrap-header">
-		<div class="container-fluid">
-			<a href="/myhome1/home.mt" class="probootstrap-logo">Art Museum 미술관<span>.</span></a>
 
-			<a href="#" class="probootstrap-burger-menu visible-xs"><i>Menu</i></a>
+		<div class="container-fluid">
+			<a href="/myhome1/home.mt" class="probootstrap-logo">Art Museum
+				미술관<span>.</span>
+			</a> <a href="#" class="probootstrap-burger-menu visible-xs"><i>Menu</i></a>
 			<div class="mobile-menu-overlay"></div>
 
 			<nav role="navigation" class="probootstrap-nav hidden-xs">
 				<ul class="probootstrap-main-nav">
 					<li><a href="/myhome1/home.mt">메인</a></li>
 					<li><a href="/myhome1/about.mt">소개</a></li>
-					<li><a href="/myhome1/museum.mt">미술관</a></li>
-					<li><a href="/myhome1/artwork.mt">작품</a></li>
+					<li><a href="/myhome1/museum.mt">미술관</a>
+						<ul>
+							<li><a href="/myhome1/museum.mt">지도</a>
+							<li><a href="/myhome1/museum2.mt">그림</a>
+						</ul></li>
+					<li><a href="/myhome1/artwork/list.mt">작품</a></li>
 					<li><a href="/myhome1/schedule.mt">전시일정</a></li>
-					<li class="active"><a href="/myhome1/board/list.mt">게시판</a></li>
+					<li><a href="/myhome1/board/list.mt">게시판</a><!-- <li class="active"> -->
+						<ul>
+							<li><a href="/myhome1/board/list.mt">Q&A</a>
+							<li><a href="/myhome1/board2/list2.mt">자유게시판</a>
+						</ul>
 					<li><a href="/myhome1/contact.mt">연락</a></li>
 				</ul>
 				<div class="extra-text visible-xs">
@@ -54,35 +61,52 @@ body {
 						<li><a href="#"><i class="icon-facebook"></i></a></li>
 						<li><a href="#"><i class="icon-instagram2"></i></a></li>
 					</ul>
-
-
-
-					<!-- member S -->
-					<div class="member">
-
-						<dl>
-							<dt>Administrator</dt>
-							<dd>${username}</dd>
-							<dd class="last">
-								<a href="#" class="btn"><img
-									src="${commonURL}/resources/images/admin/header/logout.gif"
-									width="50" height="22" alt="Logout" /></a>
-							</dd>
-						</dl>
-
-					</div>
-					<!-- member E -->
-
-					<!-- nav S -->
-					<div id="nav">
-
-						<ul>
-							<li class="on"><a href="#">공지사항</a></li>
-							<li class="off"><a href="#">자유게시판</a></li>
-						</ul>
-
-					</div>
-					<!-- nav E -->
-
+					<p>
+						<small>&copy; Copyright 2017 uiCookies:Format. All Rights
+							Reserved.</small>
+					</p>
 				</div>
-				<!-- header E -->
+			</nav>
+		</div>
+	</header>
+	<!-- END: header -->
+
+	<!-- login -->
+	<section class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box">
+					<!--					<div class="box-header with-border">
+ 
+						<h3 class="box-title">Home Page</h3>
+					</div>
+				</div>
+
+				<div class="box" />
+				<a href="/myhome1/artwork/list.mt">게시판</a>
+			</div> -->
+					</br> </br> </br>
+					<c:if test="${email==null || email==''}">
+						<div class="box" />
+						<a href="/myhome1/member/logon.mt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;로그인</a>
+				</div>
+				&nbsp;&nbsp;
+				<div class="box" />
+				<a href="/myhome1/member/member_write.mt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;회원가입</a>
+			</div>
+			</c:if>
+
+			<c:if test="${email!=null && email!=''}">
+				<%-- 			이름 : ${username} <br>
+			이메일 : ${email} <br>
+			모바일 : ${mobile} <br>
+ --%>
+ 			   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;아이디 : ${member_id} <br>
+				<div class="box" />
+				<a href="/myhome1/member/logout.mt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;로그아웃</a>
+		</div>
+		</c:if>
+		</div>
+	</section>
+
+	<!-- header E -->
