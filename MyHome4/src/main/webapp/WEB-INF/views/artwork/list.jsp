@@ -161,7 +161,7 @@ body {
 							<%
 								List<ArtworkDto> list = (List<ArtworkDto>) request.getAttribute("list");
 								int total = (Integer) request.getAttribute("total");
-								for (int i = 0; i < list.size(); i++) {
+		  						for (int i = 0; i < list.size(); i++) {
 									ArtworkDto item = list.get(i);
 									int num = total - Integer.parseInt(item.getNum()) + 1;
 									String url = commonURL + "/artwork/view.mt?seq=" + item.getSeq() + "&sel=" + sel + "&key=" + key;
