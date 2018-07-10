@@ -147,7 +147,7 @@ body {
 						<thead>
 						
 							<tr>
-								<th scope="col" class="first"></th>
+								<th scope="col" class="first">작품</th>
 								<th scope="col">제목</th>
 								<th scope="col">작성자</th>
 								<th scope="col">작성일</th>
@@ -161,7 +161,7 @@ body {
 							<%
 								List<ArtworkDto> list = (List<ArtworkDto>) request.getAttribute("list");
 								int total = (Integer) request.getAttribute("total");
-								for (int i = 0; i < list.size(); i++) {
+		  						for (int i = 0; i < list.size(); i++) {
 									ArtworkDto item = list.get(i);
 									int num = total - Integer.parseInt(item.getNum()) + 1;
 									String url = commonURL + "/artwork/view.mt?seq=" + item.getSeq() + "&sel=" + sel + "&key=" + key;
@@ -174,7 +174,7 @@ body {
 							%>
 							<tr>
 								<td class="first">
-								<img object-fit: contain; src="${commonURL}/upload/artwork/<%=item.getFilename1()%>"/></td>
+								<img src="${commonURL}/upload/artwork/<%=item.getFilename1()%>" style="max-width: 100%; height: auto;"/></td>
 								<td class="list"><%=reply%><a href="<%=url%>"><%=item.getTitle()%></a></td>
 								<td><%=item.getUsername()%></td>
 								<td><%=item.getRegdate()%></td>

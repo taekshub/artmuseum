@@ -1,8 +1,10 @@
-<%@ page language="java" 
-    contentType="text/html;charset=utf-8"
-    pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html;charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    
+<%@page import="java.util.*"%>
 <%@page import="com.multi.myhome1.artwork.dto.*"%>
-  
+<%@page import="com.multi.myhome1.common.*"%>
+
 <%@include file="../include/common.jsp"%>
 
 <%
@@ -63,6 +65,13 @@ ArtworkDto nextDto = (ArtworkDto)request.getAttribute("nextDto");
 
 			<!-- bbs view content S -->
 			<div class="bvc">
+			<%
+								List<ArtworkDto> list = (List<ArtworkDto>) request.getAttribute("list");
+								for (int i = 0; i < list.size(); i++) {
+									ArtworkDto item = list.get(i);
+									%>
+									
+			<img src="${commonURL}/upload/artwork/<%=item.getFilename1()%>" style="max-width: 100%; height: auto;"/>
 				<%=viewDto.getContents()%>
 
 				<dl class="files">
@@ -73,6 +82,7 @@ ArtworkDto nextDto = (ArtworkDto)request.getAttribute("nextDto");
 				</dl>
 			</div>
 			<!-- bbs view content E -->
+			<%}%>
 
 			<!-- bbs footer S -->
 			<div class="bftv">
