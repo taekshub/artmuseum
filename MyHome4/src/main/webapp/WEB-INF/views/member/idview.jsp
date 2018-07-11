@@ -68,7 +68,7 @@ request.setAttribute("commonURL",
             <button id="btnIdFind" class="btn btn-primary" type="submit">아이디 찾기<i class="fa fa-times spaceLeft"></i></button>
             
             <button id="btnPwdFind" class="btn btn-primary" type="submit">패스워드 찾기<i class="fa fa-times spaceLeft"></i></button>
-            <button id="btnLogon" class="btn btn-primary" type="submit">로그온<i class="fa fa-check spaceLeft"></i></button>
+            <button id="btnLogon" class="btn btn-primary" type="submit">로그인<i class="fa fa-check spaceLeft"></i></button>
           </div>
         </div>
         

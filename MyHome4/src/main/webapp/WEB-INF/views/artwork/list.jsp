@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html;charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
 <%@page import="java.util.*"%>
 <%@page import="com.multi.myhome1.artwork.dto.*"%>
@@ -137,22 +138,14 @@ body {
 						<caption class="desc">[게시판명 프로그램입력] 목록</caption>
 						<colgroup>
 							
+							<col width="20%" />
 							<col width="*" />
-							<col width="10%" />
-							<col width="10%" />
-							<col width="12%" />
-							<col width="8%" />
-							<col width="14%" />
 						</colgroup>
 						<thead>
 						
 							<tr>
 								<th scope="col" class="first">작품</th>
-								<th scope="col">제목</th>
-								<th scope="col">작성자</th>
-								<th scope="col">작성일</th>
-								<th scope="col">조회</th>
-								<th scope="col" class="last">비고</th>
+								<th scope="col">작품 정보</th>		
 							</tr>
 						
 						</thead>
@@ -174,15 +167,34 @@ body {
 							%>
 							<tr>
 								<td class="first">
-								<img src="${commonURL}/upload/artwork/<%=item.getFilename1()%>" style="max-width: 100%; height: auto;"/></td>
-								<td class="list"><%=reply%><a href="<%=url%>"><%=item.getTitle()%></a></td>
-								<td><%=item.getUsername()%></td>
-								<td><%=item.getRegdate()%></td>
-								<td><%=item.getHit()%></td>
-								<td class="last"><a href="#none" class="btn"
-									onclick="goModify('<%=item.getSeq()%>')"><span>수정</span></a> <a
-									href="#none" class="btn"
-									onclick="goDelete('<%=item.getSeq()%>')"><span>삭제</span></a></td>
+									<a href="<%=url%>"><img src="${commonURL}/upload/artwork/<%=item.getFilename1()%>" 
+									 style="width:160px; height:200px;"/></a>
+								</td>
+								<td>
+									<table style="width:100%">
+										<tr class="tr">
+											<td class="list"><strong>[작품명] : </strong> 
+												<a href="<%=url%>"><%=item.getTitle()%></a>
+											</td>
+										</tr>
+										<tr>
+											<td class="list"><strong>[작가명] : </strong><a href="<%=url%>"><%=item.getArtist()%></a></td>
+										</tr>
+										<tr>
+											<td class="list"><strong>[소개] : 
+											<%
+											String contents=item.getContents();
+											if( contents.length()>300)
+												contents = contents.substring(0, 300)+"...";
+											%>
+											</strong><a href="<%=url%>"><%=contents%></a>											
+											</td>
+										</tr>
+										<tr>
+											<td class="list"><strong>[제작연도] : </strong><a href="<%=url%>"><%=item.getCreated()%></a></td>
+										</tr>
+									</table>
+								</td>
 							</tr>
 							<%
 								}
@@ -195,13 +207,7 @@ body {
 					<!-- bbs footer S -->
 					<div class="bft">
 
-						<div class="sbb">
-							<ul>
-								<li><a href="#"><img
-										src="${commonURL}/resources/images/artwork/def/excel.gif"
-										alt="Excel Save" /></a></li>
-							</ul>
-						</div>
+						
 
 						<!-- pagination S -->
 						<div class="pg">

@@ -16,6 +16,8 @@
 		select
 			A.seq
 			,nvl(B.username, 'noname') username
+			,A.artist
+			,A.created
 			,A.userid
 			,A.title
 			,A.contents --내용
@@ -63,6 +65,8 @@
 		seq
 		,title
 		,contents
+		,artist
+		,created
 		,userid
 		,hit
 		,group_id
@@ -81,6 +85,8 @@
 		#{seq}
 		,#{title}
 		,#{contents}
+		,#{artist}
+		,#{created}
 		,#{userid}
 		,0
 		,#{seq}
@@ -124,6 +130,8 @@
 			seq
 			,nvl((select username from member B 
 			where A.userid=B.email), 'noname') username
+			,artist
+			,created
 			,userid
 			,title
 			,contents --내용

@@ -1,144 +1,117 @@
-<%@ page language="java" 
-    contentType="text/html;charset=utf-8"
-    pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html;charset=utf-8"
+	pageEncoding="utf-8"%>
 <%@page import="com.multi.myhome1.artwork.dto.*"%>
 <%@page import="java.util.*"%>
-  
+
 <%@include file="../include/common.jsp"%>
 
 <body class="admin" lang="en">
-<form name="mform" id="mform" 
-      method="post"
-      enctype="multipart/form-data">      
+	<form name="mform" id="mform" method="post"
+		enctype="multipart/form-data">
 
-	<input type="hidden" name="group_id"
-	   id="group_id" value="${resultDto.group_id}">
-	<input type="hidden" name="depth"
-	   id="depth" value="${resultDto.depth}">
-	<input type="hidden" name="g_level"
-	   id="g_level" value="${resultDto.g_level}"> 
-	<input type="hidden" name="seq"
-	   id="seq" value="${param.seq}"> 
- 	<input type="hidden" name="mode"
-	   id="mode" value="${param.mode}"> 
- 
-<!--
+		<input type="hidden" name="group_id" id="group_id"
+			value="${resultDto.group_id}"> <input type="hidden"
+			name="depth" id="depth" value="${resultDto.depth}"> <input
+			type="hidden" name="g_level" id="g_level"
+			value="${resultDto.g_level}"> <input type="hidden" name="seq"
+			id="seq" value="${param.seq}"> <input type="hidden"
+			name="mode" id="mode" value="${param.mode}">
+
+		<!--
  
 <!-- site align S -->
-<div class="sa">
+		<div class="sa">
 
-	<%@include file="../include/header.jsp"%>
+			<%@include file="../include/header.jsp"%>
 
-<%-- 	<%@include file="../include/left.jsp"%>
- --%>	
+			<%-- 	<%@include file="../include/left.jsp"%>
+ --%>
 
-	<!-- section S -->
-	<div id="section">
+			<!-- section S -->
+			<div id="section">
 
-		<div id="pagetitle">
+				<div id="pagetitle">
 
-			<h2>관리자 모드</h2>
+					<h2>관리자 모드</h2>
 
 
-		</div>
-
-		<div id="content">
-
-			<h3>관리자 쓰기</h3>
-
-			<!-- bbs default write S -->
-			<table cellspacing="0" summary="[프로그램 입력] 글쓰기 입력 양식입니다." class="bdw">
-				<caption>글쓰기 입력 양식</caption>
-				<colgroup><col width="125" /><col width="*" /></colgroup>
-				<tbody>
-					<tr>
-						<th scope="row" class="first"><label for="title">제목</label></th>
-						<td class="last"><input type="text" id="title" name="title" size="70"
-						   value="${resultDto.title}" /></td>
-					</tr>
-					<tr>
-						<th scope="row" class="first">
-						  <label for="userid">작성자</label></th>
-						<td class="last">
-						<input type="hidden" id="userid" name="userid" size="70" 
-						       value="${email}" /> 
-						${username}
-						</td>
-					</tr>
-
-					<tr>
-						<th scope="row" class="first"><label for="editor">내용</label></th>
-						<td class="last"><textarea id="editor" name="contents" rows="10">${resultDto.contents}</textarea></td>
-					</tr>
-					
-					<%
-					String mode=request.getParameter("mode");
-					for(int i=0; i<3; i++)
-					{
-						if(!mode.equals("update")){
-						
-					%>
-					<tr>
-						<th scope="row" class="first"><label for="atchfile">첨부파일</label></th>
-						<td class="last"><input type="file" id="files<%=(i+1)%>" name="files" size="50" class="atchfile" /></td>
-					</tr>
-					<%  }
-						else{
-						Hashtable<String, String> map =
-							(Hashtable<String, String>)
-							request.getAttribute("filemap");
-						
-					%>
-					<tr>
-						<th scope="row" class="first"><label for="atchfile">첨부파일</label></th>
-						<td class="last">
-													
-						<input type="file"   id="files<%=(i+1)%>" name="files" size="50" class="atchfile" />
-						<input type="checkbox" id="del<%=(i+1)%>" 
-						             onclick="goChange('<%=i+1%>')" value="<%=(i+1)%>" >삭제 
-						&nbsp;&nbsp;
-						<%=map.get("filename"+(i+1))%>
-						<input type="hidden" name="old_name" 
-						     id="old_name" 
-						value="<%=map.get("filename"+(i+1))%>" >
-						</td>
-					</tr>
-					<%		
-						}
-					}
-					%>
-				</tbody>
-			</table>
-			<!-- bbs default write E -->
-
-			<!-- bbs footer S -->
-			<div class="bft">
-
-				<div class="bb">
-					<ul>
-						<li><a href="#" onclick="history.go(-1)">취소</a></li>
-						<li class="inputBtn">
-						<input type="button" id="btnWrite" value="확인" /></li>
-					</ul>
 				</div>
 
-			</div>
-			<!-- bbs footer E -->
+				<div id="content">
 
-			
+					<h3>관리자 쓰기</h3>
+
+					<!-- bbs default write S -->
+					<table cellspacing="0" summary="[프로그램 입력] 글쓰기 입력 양식입니다."
+						class="bdw">
+						<caption>글쓰기 입력 양식</caption>
+						<colgroup>
+							<col width="125" />
+							<col width="*" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row" class="first"><label for="title">작품명</label></th>
+								<td class="last"><input type="text" id="title" name="title"
+									size="70" value="${resultDto.title}" /></td>
+							</tr>
+
+							<tr>
+								<th scope="row" class="first"><label for="artist">작가명</label></th>
+								<td class="last"><input type="text" id="artist"
+									name="artist" size="70" value="${resultDto.artist}" /></td>
+							</tr>
+
+							<tr>
+								<th scope="row" class="first"><label for="contents">설명</label></th>
+								<td class="last"><textarea id="editor" name="contents"
+										rows="10">${resultDto.contents}</textarea></td>
+							</tr>
+
+							<tr>
+								<th scope="row" class="first"><label for="created">제작 연도</label></th>
+								<td class="last"><input type="text" id="created"
+									name="created" size="70" value="${resultDto.created}" /></td>
+							</tr>
+
+							<tr>
+								<th scope="row" class="first"><label for="atchfile">첨부파일</label></th>
+								<td class="last"><input type="file" id="files"
+									name="files" size="50" class="atchfile" /></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- bbs default write E -->
+
+					<!-- bbs footer S -->
+					<div class="bft">
+
+						<div class="bb">
+							<ul>
+								<li><a href="#" onclick="history.go(-1)">취소</a></li>
+								<li class="inputBtn"><input type="button" id="btnWrite"
+									value="확인" /></li>
+							</ul>
+						</div>
+
+					</div>
+					<!-- bbs footer E -->
+
+
+
+				</div>
+				<!-- content E -->
+
+			</div>
+			<!-- section E -->
+
+			<%@include file="../include/footer.jsp"%>
 
 		</div>
-		<!-- content E -->
+		<!-- site align E -->
 
-	</div>
-	<!-- section E -->
-
-	<%@include file="../include/footer.jsp"%>
-
-</div>
-<!-- site align E -->
-
-</form>
+	</form>
 </body>
 </html>
 
@@ -239,17 +212,15 @@ $(document).ready(function(){
 					alert('글이 등록되었습니다');
 				
 				location.href="<%=commonURL%>/artwork/list.mt";
-			},
-			error:function(request, status, error){
-				//서버호출 실패시 
-				alert("파일 용량이 너무 커서 못올립니다");
-			}
-		});
-		
-		
-	});
-});
+				},
+				error : function(request, status, error) {
+					//서버호출 실패시 
+					alert("파일 용량이 너무 커서 못올립니다");
+				}
+			});
 
+		});
+	});
 </script>
 
 

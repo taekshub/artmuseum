@@ -47,7 +47,7 @@ request.setAttribute("commonURL",
       <article class="container">
         <div class="col-md-12">
         <div class="page-header">
-    	    <h1>로그온</h1>
+    	    <h1>로그인</h1>
         </div>
 
         <div class="form-group">
@@ -68,7 +68,7 @@ request.setAttribute("commonURL",
         </div>
         <div class="form-group">
           <div class="col-sm-12 text-center">
-            <button id="btnLogon"  class="btn btn-primary" type="submit">로그온</button>
+            <button id="btnLogon"  class="btn btn-primary" type="submit">로그인</button>
             <button id="btnIdFind"   class="btn btn-danger" type="submit">아이디 찾기</button>
             <button id="btnPwdFind"  class="btn btn-danger" type="submit">비밀번호 찾기</button>
           </div>
@@ -125,7 +125,7 @@ $(function(){
 			   }
 			   else  
 			   {
-					alert("로그온 되셨습니다");
+					alert("로그인 되셨습니다");
 					//페이지 이동 
 					location.href="${commonURL}/home.mt";
 			   }

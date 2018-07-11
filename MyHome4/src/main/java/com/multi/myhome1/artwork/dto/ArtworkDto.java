@@ -26,8 +26,28 @@ public class ArtworkDto {
 	private String depth="0";
 	private String g_level="0";
 	private String hit="0";
+	private String artist="";
+	private String created="";
 	
 	
+	
+	
+
+	public String getCreated() {
+		return created;
+	}
+
+	public void setCreated(String created) {
+		this.created = created;
+	}
+
+	public String getArtist() {
+		return artist;
+	}
+
+	public void setArtist(String artist) {
+		this.artist = artist;
+	}
 
 	public String getUsername() {
 		return username;

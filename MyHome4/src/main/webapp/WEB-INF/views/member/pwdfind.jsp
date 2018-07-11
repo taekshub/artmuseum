@@ -69,7 +69,7 @@ request.setAttribute("commonURL",
         <div class="form-group">
           <div class="col-sm-12 text-center">
             <button id="btnPwdFind" class="btn btn-danger" type="submit">비밀번호 찾기<i class="fa fa-times spaceLeft"></i></button>
-            <button id="btnLogon" class="btn btn-primary" type="submit">로그온<i class="fa fa-check spaceLeft"></i></button>
+            <button id="btnLogon" class="btn btn-primary" type="submit">로그인<i class="fa fa-check spaceLeft"></i></button>
           </div>
         </div>
         

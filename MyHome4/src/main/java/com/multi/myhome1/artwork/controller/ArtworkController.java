@@ -88,6 +88,7 @@ public class ArtworkController {
 	@RequestMapping("/artwork/view")
 	public void getView(Model model, ArtworkDto dto)
 	{
+		
 		ArtworkDto viewDto = artworkService.getView(dto.getSeq());
 		ArtworkDto prevDto = artworkService.getPrev(viewDto);
 		ArtworkDto nextDto = artworkService.getNext(viewDto);

@@ -15,6 +15,11 @@ ArtworkDto nextDto = (ArtworkDto)request.getAttribute("nextDto");
 
 %>
 <body class="admin" lang="en">
+
+	<!-- START: header, login -->
+	<%@include file="../include/header.jsp"%>
+	<!-- End: header, login -->
+
 <form name="mform" id="mform">
 	<input type="hidden" name="pg" id="pg"
 	     value="${param.pg}">
@@ -30,11 +35,7 @@ ArtworkDto nextDto = (ArtworkDto)request.getAttribute("nextDto");
 
 
 <!-- site align S -->
-<div class="sa">
-
-	<%@include file="../include/header.jsp"%>
-
-	
+<div class="sa">	
 
 	<!-- section S -->
 	<div id="section">
@@ -51,11 +52,11 @@ ArtworkDto nextDto = (ArtworkDto)request.getAttribute("nextDto");
 			<!-- bbs view header S -->
 			<div class="bvhd dbline">
 				<dl>
-					<dt class="subject">제목</dt>
+					<dt class="subject">작품명</dt>
 						<dd class="subject"><%=viewDto.getTitle()%></dd>
 					<dt class="date">작성일</dt>
 						<dd class="date"><%=viewDto.getRegdate()%></dd>
-					<dt class="country">작성자</dt>
+					<dt class="country">작가명</dt>
 						<dd class="country"><%=viewDto.getUsername()%></dd>
 					<dt class="hits">조회</dt>
 						<dd class="hits"><%=viewDto.getHit()%></dd>
@@ -65,14 +66,13 @@ ArtworkDto nextDto = (ArtworkDto)request.getAttribute("nextDto");
 
 			<!-- bbs view content S -->
 			<div class="bvc">
-			<%
-								List<ArtworkDto> list = (List<ArtworkDto>) request.getAttribute("list");
-								for (int i = 0; i < list.size(); i++) {
-									ArtworkDto item = list.get(i);
-									%>
-									
-			<img src="${commonURL}/upload/artwork/<%=item.getFilename1()%>" style="max-width: 100%; height: auto;"/>
+			
+			
+			
+			<img src="${commonURL}/upload/artwork/<%=viewDto.getFilename1()%>" style="max-width: 100%; height: auto;"/>
+			
 				<%=viewDto.getContents()%>
+								
 
 				<dl class="files">
 					<dt>첨부파일</dt>
@@ -82,7 +82,7 @@ ArtworkDto nextDto = (ArtworkDto)request.getAttribute("nextDto");
 				</dl>
 			</div>
 			<!-- bbs view content E -->
-			<%}%>
+			
 
 			<!-- bbs footer S -->
 			<div class="bftv">
