@@ -51,7 +51,7 @@ ArtworkDto nextDto = (ArtworkDto)request.getAttribute("nextDto");
 
 			<!-- bbs view header S -->
 			<div class="bvhd dbline">
-				<dl>
+				<dl> 
 					<dt class="subject">작품명</dt>
 						<dd class="subject"><%=viewDto.getTitle()%></dd>
 					<dt class="date">작성일</dt>
