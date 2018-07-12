@@ -62,7 +62,7 @@
 									name="userid" size="70" value="${email}" /> ${username}</td>
 							</tr>
 
-							<tr>
+							<tr>  
 								<th scope="row" class="first"><label for="editor">내용</label></th>
 								<td class="last"><textarea id="editor" name="contents"
 										rows="10">${resultDto.contents}</textarea></td>
