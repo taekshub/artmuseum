@@ -56,7 +56,7 @@
 									size="70" value="${resultDto.title}" /></td>
 							</tr>
 							
-							<tr>
+							<tr> 
 								<th scope="row" class="first"><label for="userid">작성자</label></th>
 								<td class="last"><input type="hidden" id="userid"
 									name="userid" size="70" value="${email}" /> ${username}</td>
