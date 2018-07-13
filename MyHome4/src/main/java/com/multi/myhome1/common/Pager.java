@@ -5,12 +5,14 @@ import javax.servlet.http.HttpServletRequest;
 
 
 public class Pager {
-		
+		 
 	//함수, 페이지 태그를 만드는 함수 
 	//<a href= .....
 	public static String makeTag(HttpServletRequest request , int pageSize , int total) {
 		String Tag = "" ; 
 		String contextPath = request.getContextPath();
+		
+		/*우리성택이 페이징하니 ㅇㅅㅇ*/
 		
 		int cpage; //현재페이지 정보
 		int pageTotal; //전체 페이지 개수 
@@ -90,6 +92,8 @@ public class Pager {
 					sb.append("</li>\r\n") ;  
 				}
 			}
+			
+			/*성택이 바보 ㅇㅅㅇ 뀨 뀨*/
 			
 			sb.append("</ul>\r\n") ;  
 			sb.append(hasNextPage ? makeLink(pageGroupEnd, nextLabel) : nextLabel);
