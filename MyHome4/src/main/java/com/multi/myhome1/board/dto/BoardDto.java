@@ -11,6 +11,8 @@ public class BoardDto {
 	private String key="";
 	private String num="";
 	
+	private String ip_addr="";
+	
 	private String username="";
 	private String seq="";
 	private String userid="";
@@ -199,6 +201,16 @@ public class BoardDto {
 	public void setNum(String num) {
 		this.num = num;
 	}
+
+	public String getIp_addr() {
+		return ip_addr;
+	}
+
+	public void setIp_addr(String ip_addr) {
+		this.ip_addr = ip_addr;
+	}
+	
+	
 	
 	
 }

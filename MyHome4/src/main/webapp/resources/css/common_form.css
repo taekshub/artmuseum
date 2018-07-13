@@ -3,7 +3,7 @@
 WebStyleGuide Common Form Style Sheet
 **********************************************************************/
 input	{font-family: "돋움"; height:1.5em; font-family:Verdana; color:#666; font-size:12px; line-height:1.5em; vertical-align:middle; border:1px solid #aaa; }
-select	{font-family: "돋움"; height:20px;  color:#666; font-family:Verdana; font-size:12px; letter-spacing:0; vertical-align:middle; border:1px solid #aaa; }
+select	{font-family: "돋움"; height:24px;  color:#666; font-family:Verdana; font-size:12px; letter-spacing:0; vertical-align:middle; border:1px solid #aaa; }
 select option	{ padding-right:20px; }
 input.radio, input.checkbox, input.submit	{ width:auto !important; height:auto; border:none; }
 input.atchfile			{ height:22px; border:1px solid #aaa; display:inline; }
@@ -33,7 +33,7 @@ table.bdl   {font-family: "돋움"; border-top:solid 2px #727272; background:url
 table.bdl thead tr th   { height:26px; color:#666; font-size:12px; font-weight:bold; line-height:26px; background:url("../images/board/def/th_line.gif") no-repeat 100% 48%; letter-spacing:1px; }
 table.bdl thead tr th.last   { background:none; }
 table.bdl thead tr th img   { margin-bottom:2px; }
-table.bdl tbody tr td   { font-size:12px; }
+table.bdl tbody tr td   { font-size:15px; }
 table.bdl tbody tr td.list   {text-align:left;padding-left:15px; }
 table.bdl tbody tr th, table.bdl tbody tr td   { padding:5px 10px; font-family:verdana; letter-spacing:0; border-bottom:solid 1px #ddd; border-right:none; background:none; }
 table.bdl tbody tr.even th, table.bdl tbody tr.even td   { background-color:#fafafa; }
@@ -56,12 +56,17 @@ table.bdl tbody tr.reply td.title a   { padding-left:20px; background:url("../im
 .sbb	{ position:absolute; left:0; top:0; }
 
 /* pg */
-.pg		{ *padding:5px 0; line-height:30px; text-align:center; }
+.pg		{ *padding:8px 10px; line-height:30px; text-align:center; }
 .pg ul	{ display:inline; }
-.pg ul li	{ padding:0 5px; color:#666; font-size:11px; letter-spacing:3px; border-right:solid 1px #cacaca; display:inline; }
+.pg ul li	{ padding:8px 10px; color:#666; font-size:15px; letter-spacing:5px; display:inline; }
 .pg ul li a	{ color:#666; line-height:30px; }
-.pg ul li.on	{ background-color:#f4f4f4; }
-.pg ul li.last	{ border-right:none; }
+.pg ul li.on	{ border-radius: 30px; background-color:pink; }
+.pg ul li.last	{ padding:8px 10px; border-right:medium; }
+.pg a:hover:not(.active) {
+    background-color: #ddd;
+    padding:10px 10px 10px 10px;
+    border-radius: 50px;
+}
 
 /* list > bbsSearch*/
 .bs	{ margin:20px 0; text-align:center; clear:both; }

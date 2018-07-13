@@ -2,32 +2,34 @@ package com.multi.myhome1.common;
 
 import javax.servlet.http.HttpServletRequest;
 
+
+
 public class Pager {
 		
-	//ÇÔ¼ö, ÆäÀÌÁö ÅÂ±×¸¦ ¸¸µå´Â ÇÔ¼ö 
+	//í•¨ìˆ˜, í˜ì´ì§€ íƒœê·¸ë¥¼ ë§Œë“œëŠ” í•¨ìˆ˜ 
 	//<a href= .....
 	public static String makeTag(HttpServletRequest request , int pageSize , int total) {
 		String Tag = "" ; 
 		String contextPath = request.getContextPath();
 		
-		int cpage; //ÇöÀçÆäÀÌÁö Á¤º¸
-		int pageTotal; //ÀüÃ¼ ÆäÀÌÁö °³¼ö 
+		int cpage; //í˜„ì¬í˜ì´ì§€ ì •ë³´
+		int pageTotal; //ì „ì²´ í˜ì´ì§€ ê°œìˆ˜ 
 		int pageGroupSize = 5;
-		//ÇÑ ±×·ì´ç º¸¿©Áú ÆäÀÌÁö ¼ö 
+		//í•œ ê·¸ë£¹ë‹¹ ë³´ì—¬ì§ˆ í˜ì´ì§€ ìˆ˜
 		int pageGroupStart; //1,6,11,16,...
 		int pageGroupEnd;//5,10,15,....
 
 		String path="";
 		//System.out.println(path);
-		String beginLabel 	= "<img src=\"" + contextPath + "/resources/images/board/def/pg_first.gif\" alt=\"Ã¹ ÆäÀÌÁö\" />";
-		String prevLabel 	= "<img src=\"" + contextPath + "/resources/images/board/def/pg_prev.gif\" alt=\"ÀÌÀü ÆäÀÌÁö\" />";
-		String nextLabel 	= "<img src=\"" + contextPath + "/resources/images/board/def/pg_next.gif\" alt=\"´ÙÀ½ ÆäÀÌÁö\" />";
-		String endLabel 	= "<img src=\"" + contextPath + "/resources/images/board/def/pg_last.gif\" alt=\"¸¶Áö¸· ÆäÀÌÁö\" />";	
+		String beginLabel 	= "<img src=\"" + contextPath + "/resources/images/board/def/pg_first.gif\" alt=\"Ã¹ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\" />		";
+		String prevLabel 	= "<img src=\"" + contextPath + "/resources/images/board/def/pg_prev.gif\" alt=\"ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\" />";
+		String nextLabel 	= "<img src=\"" + contextPath + "/resources/images/board/def/pg_next.gif\" alt=\"ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\" />";
+		String endLabel 	= "		<img src=\"" + contextPath + "/resources/images/board/def/pg_last.gif\" alt=\"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\" />";	
 
 		/*<div class="pg">
 
-		<a href="#" class="f"><img src="<%=contextPath%>/admin/images/board/def/pg_first.gif" alt="Ã¹ ÆäÀÌÁö" /></a>
-		<a href="#" class="p"><img src="<%=contextPath%>/admin/images/board/def/pg_prev.gif" alt="ÀÌÀü ÆäÀÌÁö" /></a>
+		<a href="#" class="f"><img src="<%=contextPath%>/admin/images/board/def/pg_first.gif" alt="Ã¹ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" /></a>
+		<a href="#" class="p"><img src="<%=contextPath%>/admin/images/board/def/pg_prev.gif" alt="ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" /></a>
 		<ul>
 			<li class="on"><strong>1</strong></li>
 			<li><a href="#">2</a></li>
@@ -40,8 +42,8 @@ public class Pager {
 			<li><a href="#">9</a></li>
 			<li class="last"><a href="#">10</a></li>
 		</ul>
-		<a href="#" class="n"><img src="<%=contextPath%>/admin/images/board/def/pg_next.gif" alt="´ÙÀ½ ÆäÀÌÁö" /></a>
-		<a href="#" class="l"><img src="<%=contextPath%>/admin/images/board/def/pg_last.gif" alt="¸¶Áö¸· ÆäÀÌÁö" /></a>
+		<a href="#" class="n"><img src="<%=contextPath%>/admin/images/board/def/pg_next.gif" alt="ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" /></a>
+		<a href="#" class="l"><img src="<%=contextPath%>/admin/images/board/def/pg_last.gif" alt="ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" /></a>
 
 	</div>*/
 		
@@ -58,8 +60,8 @@ public class Pager {
 			cpage = Integer.parseInt(page) ; 
 
 			pageTotal = (total - 1) / pageSize;
-			//total - ÀüÃ¼ µ¥ÀÌÅÍ °Ç¼ö 
-			//ÀüÃ¼ ÆäÀÌÁö °³¼ö ±¸ÇÏ±â 
+			//total - ì „ì²´ ë°ì´í„° ê±´ìˆ˜ 
+			//ì „ì²´ í˜ì´ì§€ ê°œìˆ˜ êµ¬í•˜ê¸° 
            
 			pageGroupStart = (int) (cpage / pageGroupSize) * pageGroupSize;
 			pageGroupEnd = pageGroupStart + pageGroupSize;
@@ -94,9 +96,9 @@ public class Pager {
 			sb.append((cpage < pageTotal) ? makeLink(pageTotal, endLabel) : endLabel);
 			
 			sb.append("</div>") ;
-			Tag = sb.toString() ; 	
+			Tag = sb.toString() ;
 		} catch ( Exception e ) {
-			e.printStackTrace() ; 
+			e.printStackTrace() ;
 		}
 			
 		return Tag ; 
@@ -108,9 +110,6 @@ public class Pager {
 		tmp.append("<a href=\"javascript:goPage('" + page + "')\">").append(label).append("</a>");
 		return tmp.toString();
 	}
-	
-	
-	
 	
 	
 }

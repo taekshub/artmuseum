@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html;charset=utf-8" pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html;charset=utf-8"
+	pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
@@ -13,7 +14,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>게시판</title>
+<title>작품 게시판</title>
 <meta name="description" content="Free Bootstrap Theme by uicookies.com">
 <meta name="keywords"
 	content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
@@ -38,6 +39,10 @@
 body {
 	background-color: #ffe6e6;
 }
+
+.probootstrap-footer {
+	align-content: center;
+}
 </style>
 
 
@@ -52,25 +57,6 @@ body {
 	<!-- End: header, login -->
 
 
-
-
-
-	<!-- nav S -->
-	<div id="nav">
-
-		<ul>
-			<li class="on"><a href="#">공지사항</a></li>
-			<li class="off"><a href="#">자유게시판</a></li>
-		</ul>
-
-	</div>
-	<!-- nav E -->
-
-
-
-
-
-
 	<form name="mform" id="mform">
 		<input type="hidden" name="pg" value="<%=pg%>" id="pg" /> <input
 			type="hidden" name="mode" id="mode" /> <input type="hidden"
@@ -79,161 +65,143 @@ body {
 		<!-- site align S -->
 		<div class="sa">
 
-
 			<!-- section S -->
-			<div id="section">
-				<div id="pagetitle">
-					<h2>게 시 판</h2>
-				</div>
+			<div id="content">
+				<h3>작품게시판</h3>
+				<!-- bbs search S -->
+				<div class="bs">
+					<fieldset>
+						<legend class="desc">Search</legend>
 
-				<div id="content">
-
-
-
-					<h3>작품게시판</h3>
-
-					<!-- bbs search S -->
-					<div class="bs">
-						<fieldset>
-							<legend class="desc">Search</legend>
-
-							<h3>
-								<img
-									src="${commonURL}/resources/images/artwork/def/search_title.gif"
-									width="46" height="9" alt="search" />
-							</h3>
-							<p>
-								<label for="sel" class="desc">Target</label> <select id="sel"
-									name="sel">
-									<option value="all" <%if (sel.equals("all")) {%> selected <%}%>>전체</option>
-									<option value="title" <%if (sel.equals("title")) {%> selected
-										<%}%>>제목</option>
-									<option value="contents" <%if (sel.equals("contents")) {%>
-										selected <%}%>>내용</option>
-								</select> <label for="key" class="desc">Keyword</label> <input
-									type="text" id="key" name="key" class="keyword" size="30"
-									value="<%=key%>" /> <span class="inbtn inputBtn"><input
-									type="button" onclick="goSearch()" class="submit"
-									value="Search" /></span>
-							</p>
-
-						</fieldset>
-					</div>
-					<!-- bbs search E -->
-
-					<!-- bbs header S -->
-					<div class="bhd">
-						<p class="fl">
-							<strong>${total}</strong> 의 게시물이 있습니다.
+						<h3>
+							<img
+								src="${commonURL}/resources/images/board/def/search_title.gif"
+								width="46" height="9" alt="search" />
+						</h3>
+						<p>
+							<label for="sel" class="desc">Target</label> <select id="sel"
+								name="sel">
+								<option value="all" <%if (sel.equals("all")) {%> selected <%}%>>전체</option>
+								<option value="title" <%if (sel.equals("title")) {%> selected
+									<%}%>>제목</option>
+								<option value="contents" <%if (sel.equals("contents")) {%>
+									selected <%}%>>내용</option>
+							</select> <label for="key" class="desc">Keyword</label> <input type="text"
+								id="key" name="key" class="keyword" size="30" value="<%=key%>" />
+							<span class="inbtn inputBtn"><input type="button"
+								onclick="goSearch()" class="submit" value="Search" /></span>
 						</p>
+
+					</fieldset>
+				</div>
+				<!-- bbs search E -->
+
+				<!-- bbs header S -->
+				<div class="bhd">
+					<p class="fl">
+						<strong>${total}</strong> 의 게시물이 있습니다.
+					</p>
+				</div>
+				<!-- bbs header E -->
+
+
+
+
+				<!-- bbs default list S -->
+				<table cellspacing="0" summary="[게시판명 프로그램입력]의 게시물 목록 입니다."
+					class="bdl">
+					<caption class="desc">[게시판명 프로그램입력] 목록</caption>
+					<colgroup>
+
+						<col width="20%" />
+						<col width="*" />
+					</colgroup>
+					<thead>
+
+						<tr>
+							<th scope="col" class="first">작품</th>
+							<th scope="col">작품 정보</th>
+						</tr>
+
+					</thead>
+
+					<tbody>
+						<%
+							List<ArtworkDto> list = (List<ArtworkDto>) request.getAttribute("list");
+							int total = (Integer) request.getAttribute("total");
+							for (int i = 0; i < list.size(); i++) {
+								ArtworkDto item = list.get(i);
+								int num = total - Integer.parseInt(item.getNum()) + 1;
+								String url = commonURL + "/artwork/view.mt?seq=" + item.getSeq() + "&sel=" + sel + "&key=" + key;
+
+								String reply = "";
+								for (int j = 0; j < Integer.parseInt(item.getDepth()); j++)
+									reply += "&nbsp;&nbsp;&nbsp;";
+								if (reply.length() > 0)
+									reply += "ㄴ>";
+						%>
+						<tr>
+							<td class="first"><a href="<%=url%>"><img
+									src="${commonURL}/upload/artwork/<%=item.getFilename1()%>"
+									style="width: 160px; height: 200px;" /></a></td>
+							<td>
+								<table style="width: 100%">
+									<tr class="tr">
+										<td class="list"><strong>[작품명] : </strong> <a
+											href="<%=url%>"><%=item.getTitle()%></a></td>
+									</tr>
+									<tr>
+										<td class="list"><strong>[작가명] : </strong><a
+											href="<%=url%>"><%=item.getArtist()%></a></td>
+									</tr>
+									<tr>
+										<td class="list"><strong>[소개] : <%
+											String contents = item.getContents();
+												if (contents.length() > 300)
+													contents = contents.substring(0, 300) + "...";
+										%>
+										</strong><a href="<%=url%>"><%=contents%></a></td>
+									</tr>
+									<tr>
+										<td class="list"><strong>[제작연도] : </strong><a
+											href="<%=url%>"><%=item.getCreated()%></a></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<%
+							}
+						%>
+					</tbody>
+
+				</table>
+				<!-- bbs default list E -->
+
+				<!-- bbs footer S -->
+				<div class="bft">
+
+
+
+					<!-- pagination S -->
+					<div class="pg">
+
+						<%=Pager.makeTag(request, 10, total)%>
 					</div>
-					<!-- bbs header E -->
+					<!-- pagination E -->
 
+					<div class="bb withpg">
+						<ul>
+							<li><a href="#none" id="btnList">목록</a></li>
+							<li><a href="#none" id="btnWrite">글쓰기</a></li>
 
-
-
-					<!-- bbs default list S -->
-					<table cellspacing="0" summary="[게시판명 프로그램입력]의 게시물 목록 입니다."
-						class="bdl">
-						<caption class="desc">[게시판명 프로그램입력] 목록</caption>
-						<colgroup>
-							
-							<col width="20%" />
-							<col width="*" />
-						</colgroup>
-						<thead>
-						
-							<tr>
-								<th scope="col" class="first">작품</th>
-								<th scope="col">작품 정보</th>		
-							</tr>
-						
-						</thead>
-
-						<tbody>
-							<%
-								List<ArtworkDto> list = (List<ArtworkDto>) request.getAttribute("list");
-								int total = (Integer) request.getAttribute("total");
-		  						for (int i = 0; i < list.size(); i++) {
-									ArtworkDto item = list.get(i);
-									int num = total - Integer.parseInt(item.getNum()) + 1;
-									String url = commonURL + "/artwork/view.mt?seq=" + item.getSeq() + "&sel=" + sel + "&key=" + key;
-
-									String reply = "";
-									for (int j = 0; j < Integer.parseInt(item.getDepth()); j++)
-										reply += "&nbsp;&nbsp;&nbsp;";
-									if (reply.length() > 0)
-										reply += "ㄴ>";
-							%>
-							<tr>
-								<td class="first">
-									<a href="<%=url%>"><img src="${commonURL}/upload/artwork/<%=item.getFilename1()%>" 
-									 style="width:160px; height:200px;"/></a>
-								</td>
-								<td>
-									<table style="width:100%">
-										<tr class="tr">
-											<td class="list"><strong>[작품명] : </strong> 
-												<a href="<%=url%>"><%=item.getTitle()%></a>
-											</td>
-										</tr>
-										<tr>
-											<td class="list"><strong>[작가명] : </strong><a href="<%=url%>"><%=item.getArtist()%></a></td>
-										</tr>
-										<tr>
-											<td class="list"><strong>[소개] : 
-											<%
-											String contents=item.getContents();
-											if( contents.length()>300)
-												contents = contents.substring(0, 300)+"...";
-											%>
-											</strong><a href="<%=url%>"><%=contents%></a>											
-											</td>
-										</tr>
-										<tr>
-											<td class="list"><strong>[제작연도] : </strong><a href="<%=url%>"><%=item.getCreated()%></a></td>
-										</tr>
-									</table>
-								</td>
-							</tr>
-							<%
-								}
-							%>
-						</tbody>
-
-					</table>
-					<!-- bbs default list E -->
-
-					<!-- bbs footer S -->
-					<div class="bft">
-
-						
-
-						<!-- pagination S -->
-						<div class="pg">
-
-							<%=Pager.makeTag(request, 10, total)%>
-						</div>
-						<!-- pagination E -->
-
-						<div class="bb withpg">
-							<ul>
-								<li><a href="#none" id="btnList">목록</a></li>
-								<li><a href="#none" id="btnWrite">글쓰기</a></li>
-
-							</ul>
-						</div>
-
+						</ul>
 					</div>
-					<!-- bbs footer E -->
-
-
 
 				</div>
-				<!-- content E -->
+				<!-- bbs footer E -->
 
 			</div>
-			<!-- section E -->
+			<!-- content E -->
 
 		</div>
 		<!-- site align E -->
@@ -242,21 +210,7 @@ body {
 
 
 	<!-- START: footer -->
-	<footer role="contentinfo" class="probootstrap-footer">
-		<div class="container">
-			<div class="row mt40">
-				<div class="col-md-12 text-center">
-					<p>
-						<small>&copy; 2018 <a href="https://uicookies.com/"
-							target="_blank">Art Museum 미술관</a>. All Rights Reserved. <br>
-							Designed &amp; Developed by <a href="https://uicookies.com/"
-							target="_blank">Sungtaek</a> Demo Images: Unsplash
-						</small><br> <a href="#" class="js-backtotop">Back to top</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	</footer>
+	<%@include file="../include/footer.jsp"%>
 	<!-- END: footer -->
 
 </body>

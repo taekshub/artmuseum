@@ -69,6 +69,7 @@
 		,g_level
 		,regdate
 		,delyn
+		,ip_addr
 		<if test="fieldNameList.size()!=0">
 			,
 			<foreach collection="fieldNameList" item="item" index="index"
@@ -87,6 +88,7 @@
 		,1
 		,sysdate
 		,'N'
+		,#{ip_addr}
 		<if test="fileNameList.size()!=0">
 			,
 			<foreach collection="fileNameList" item="item" index="index"

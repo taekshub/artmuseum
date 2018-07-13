@@ -227,8 +227,7 @@ $(document).ready(function(){
 				else
 					alert('글이 등록되었습니다');
 				
-				location.href="<%=commonURL%>
-	/board/list.mt";
+				location.href="<%=commonURL%>/board/list.mt";
 				},
 				error : function(request, status, error) {
 					//서버호출 실패시 
@@ -239,7 +238,3 @@ $(document).ready(function(){
 		});
 	});
 </script>
-
-
-
-

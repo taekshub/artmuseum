@@ -21,6 +21,7 @@ import com.multi.myhome1.board.dto.BoardDto;
 import com.multi.myhome1.board.service.BoardService;
 import com.multi.myhome1.common.CommonConst;
 import com.multi.myhome1.common.FileUploader;
+import com.multi.myhome1.common.IP;
 
 @Controller 
 public class BoardController {
@@ -35,7 +36,7 @@ public class BoardController {
 		List<BoardDto> list = 
 				boardService.getList(dto);
 		int total = boardService.getTotal(dto);
-		
+
 		model.addAttribute("list", list);
 		model.addAttribute("total", total);
 		
@@ -55,6 +56,10 @@ public class BoardController {
 		   BoardDto dto)
 	{		
 		ServletContext ctx= req.getServletContext();
+		String ip_addr = IP.getClientIP(req);
+		System.out.println(ip_addr);
+		dto.setIp_addr(ip_addr);
+		
 		
 		String path = ctx.getRealPath(
 				CommonConst.BOARD_PATH);

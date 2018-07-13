@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html;charset=utf-8" pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html;charset=utf-8"
+	pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%@include file="../include/common.jsp"%>
@@ -139,23 +140,9 @@ body {
 
 
 	<!-- START: footer -->
-	<footer role="contentinfo" class="probootstrap-footer">
-		<div class="container">
-			<div class="row mt40">
-				<div class="col-md-12 text-center">
-					<p>
-						<small>&copy; 2018 <a href="https://uicookies.com/"
-							target="_blank">Art Museum 미술관</a>. All Rights Reserved. <br>
-							Designed &amp; Developed by <a href="https://uicookies.com/"
-							target="_blank">Sungtaek</a> Demo Images: Unsplash
-						</small><br> <a href="#" class="js-backtotop">Back to top</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	</footer>
+	<%@include file="../include/footer.jsp"%>
 	<!-- END: footer -->
-	
+
 	<script src="js/scripts.min.js"></script>
 	<script src="js/main.min.js"></script>
 	<script src="js/custom.js"></script>

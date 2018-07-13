@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html;charset=utf-8" pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html;charset=utf-8"
+	pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%@include file="../include/common.jsp"%>
@@ -7,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>미술관</title>
+<title>미술관_그림으로 보기</title>
 <meta name="description" content="Free Bootstrap Theme by uicookies.com">
 <meta name="keywords"
 	content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
@@ -227,24 +228,8 @@ body {
 	<!-- END: section -->
 
 
-
-
 	<!-- START: footer -->
-	<footer role="contentinfo" class="probootstrap-footer">
-		<div class="container">
-			<div class="row mt40">
-				<div class="col-md-12 text-center">
-					<p>
-						<small>&copy; 2018 <a href="https://uicookies.com/"
-							target="_blank">Art Museum 미술관</a>. All Rights Reserved. <br>
-							Designed &amp; Developed by <a href="https://uicookies.com/"
-							target="_blank">Sungtaek</a> Demo Images: Unsplash
-						</small><br> <a href="#" class="js-backtotop">Back to top</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	</footer>
+	<%@include file="../include/footer.jsp"%>
 	<!-- END: footer -->
 
 	<script src="js/scripts.min.js"></script>

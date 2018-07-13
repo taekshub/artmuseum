@@ -61,6 +61,12 @@
 								<td class="last"><input type="text" id="artist"
 									name="artist" size="70" value="${resultDto.artist}" /></td>
 							</tr>
+							
+							<tr>  
+								<th scope="row" class="first"><label for="userid">작성자</label></th>
+								<td class="last"><input type="hidden" id="userid"
+									name="userid" size="70" value="${email}" /> ${username}</td>
+							</tr>
 
 							<tr>
 								<th scope="row" class="first"><label for="contents">설명</label></th>
