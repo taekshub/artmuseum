@@ -60,7 +60,7 @@ body {
 			<div id="content">
 
 
-				<h3>자유게시판</h3>
+				<h3>&nbsp;자유게시판</h3>
 
 				<!-- bbs search S -->
 				<div class="bs">

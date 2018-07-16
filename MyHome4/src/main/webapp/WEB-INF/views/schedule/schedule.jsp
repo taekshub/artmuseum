@@ -14,11 +14,17 @@
 	content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
 
 <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500"
-	rel="stylesheet">
+	rel="stylesh eet">
 <link rel="stylesheet" href="/myhome1/resources/css/styles-merged.css">
 <link rel="stylesheet" href="/myhome1/resources/css/style.min.css">
 <link rel="stylesheet" href="/myhome1/resources/css/custom.css">
 <link rel="stylesheet" href="/myhome1/resources/css/animate.css">
+
+<link href='/myhome1/resources/css/fullcalendar/fullcalendar.min.css' rel='stylesheet' />
+<link href='/myhome1/resources/css/fullcalendar/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+<script src='/myhome1/resources/js/fullcalendar/moment.min.js'></script>
+<script src='/myhome1/resources/js/fullcalendar/jquery.min.js'></script>
+<script src='/myhome1/resources/js/fullcalendar/fullcalendar.min.js'></script>
 
 <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>
@@ -30,6 +36,10 @@
 body {
 	background-color: #ffe6e6;
 }
+#calendar {
+	padding : 30px 50px 30px;
+}
+
 </style>
 
 <body>
@@ -38,114 +48,85 @@ body {
 	<%@include file="../include/header.jsp"%>
 	<!-- End: header, login -->
 
-	<!-- START: section -->
-	<section class="probootstrap-intro"
-		style="background-image: url(img/hero_bg_2.jpg);"
-		data-stellar-background-ratio="0.5">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-7 probootstrap-intro-text">
-					<h1 class="probootstrap-animate">Project Title Here</h1>
-					<div class="probootstrap-subtitle probootstrap-animate">
-						<h2>
-							A free html website template for creative agency like you!
-							brought to you by <a href="https://uicookies.com/"
-								target="_blank">uicookies.com</a>
-						</h2>
-					</div>
-					<p class="watch-intro probootstrap-animate">
-						<a href="https://vimeo.com/45830194" class="popup-vimeo">Watch
-							the video <i class="icon-play2"></i>
-						</a>
-					</p>
-				</div>
+	<!-- site align S -->
+		<div class="sa">
+			<!-- section S -->
+			<div id="content">
+				<h3>&nbsp;전시일정</h3>
 			</div>
 		</div>
-		<a class="probootstrap-scroll-down js-next" href="#next-section">Scroll
-			down <i class="icon-chevron-down"></i>
-		</a>
-	</section>
-	<!-- END: section -->
+		
+<script>
 
+  $(document).ready(function() {
 
-	<section id="next-section" class="probootstrap-section">
-		<div class="container">
-			<div class="col-md-3 col-md-push-9">
-				<h2>Description</h2>
-				<p>Far far away, behind the word mountains, far from the
-					countries Vokalia and Consonantia, there live the blind texts.
-					Separated they live in Bookmarksgrove right at the coast of the
-					Semantics, a large language ocean.</p>
-				<p class="mb20">
-					<strong class="probootstrap-black-color">Role:</strong> <br>
-					Design <br> Branding <br> Mobile Design
-				</p>
-				<p class="mb50">
-					<strong class="probootstrap-black-color">Client</strong> <br>
-					Google, Inc.
-				</p>
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay,listWeek'
+      },
+      defaultDate: new Date(),
+      navLinks: true, // can click day/week names to navigate views
+      editable: true,
+      eventLimit: true, // allow "more" link when too many events
+      events: [
+        {
+          title: 'All Day Event',
+          start: '2018-07-01',
+        },
+        {
+          title: 'Long Event',
+          start: '2018-07-07',
+          end: '2018-07-10'
+        },
+        {
+          id: 999,
+          title: 'Repeating Event',
+          start: '2018-07-09T16:00:00'
+        },
+        {
+          id: 999,
+          title: 'Repeating Event',
+          start: '2018-07-16T16:00:00'
+        },
+        {
+          title: 'Meeting',
+          start: '2018-07-12T10:30:00',
+          end: '2018-07-12T12:30:00'
+        },
+        {
+          title: 'Lunch',
+          start: '2018-07-12T12:00:00'
+        },
+        {
+          title: 'Happy Hour',
+          start: '2018-07-12T17:30:00'
+        },
+        {
+          title: 'Dinner',
+          start: '2018-07-12T20:00:00'
+        },
+        {
+          title: 'Click for Google',
+          url: 'http://google.com/',
+          start: '2018-07-28'
+        }
+      ]
+    });
 
-				<p>
-					<a href="#" role="button" class="btn btn-primary">Visit Website</a>
-				</p>
-			</div>
-			<div class="col-md-9 col-md-pull-3">
-				<p>
-					<a href="img/img_3.jpg" class="image-popup"><img
-						src="img/img_3.jpg" alt="Free Bootstrap Template by uicookies.com"
-						class="img-responsive"></a>
-				</p>
-				<p>
-					<a href="img/img_2.jpg" class="image-popup"><img
-						src="img/img_2.jpg" alt="Free Bootstrap Template by uicookies.com"
-						class="img-responsive"></a>
-				</p>
-				<p>
-					<a href="img/img_4.jpg" class="image-popup"><img
-						src="img/img_4.jpg" alt="Free Bootstrap Template by uicookies.com"
-						class="img-responsive"></a>
-				</p>
-			</div>
-		</div>
-	</section>
+  });
 
+</script>
 
-
-	<!-- START: section -->
-	<section class="probootstrap-section probootstrap-section-colored">
-		<div class="container">
-			<div class="row text-center">
-				<div
-					class="col-lg-8 col-md-offset-2 mb30 section-heading probootstrap-animate">
-					<h2>Let's Work Together</h2>
-					<p class="lead">Far far away, behind the word mountains, far
-						from the countries Vokalia and Consonantia, there live the blind
-						texts. Separated they live in Bookmarksgrove right at the coast of
-						the Semantics, a large language ocean.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4 col-md-offset-4 probootstrap-animate">
-					<p class="text-center">
-						<a href="#" class="btn btn-ghost btn-ghost-white btn-lg btn-block"
-							role="button">Contact Us</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- END: section -->
-
-
+<div id='calendar'></div>
 
 
 	<!-- START: footer -->
 	<%@include file="../include/footer.jsp"%>
 	<!-- END: footer -->
 
-	<script src="js/scripts.min.js"></script>
-	<script src="js/main.min.js"></script>
-	<script src="js/custom.js"></script>
+
 
 </body>
 </html>
