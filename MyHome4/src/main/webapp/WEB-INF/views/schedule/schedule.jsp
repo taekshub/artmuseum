@@ -25,6 +25,7 @@
 <script src='/myhome1/resources/js/fullcalendar/moment.min.js'></script>
 <script src='/myhome1/resources/js/fullcalendar/jquery.min.js'></script>
 <script src='/myhome1/resources/js/fullcalendar/fullcalendar.min.js'></script>
+<script src='/myhome1/resources/js/fullcalendar/ko.js'></script>
 
 <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>
@@ -38,6 +39,7 @@ body {
 }
 #calendar {
 	padding : 30px 50px 30px;
+	font-size: 15px;
 }
 
 </style>
@@ -58,10 +60,22 @@ body {
 		
 <script>
 
+  function getDate(start)
+  {
+		var dateObj = new Date(start);
+	  	var year = dateObj.getFullYear();
+	  	var month = dateObj.getMonth()+1;
+	  	if( month<10)
+	  		month = "0"+month;
+	 	
+	  	return year+"-"+month;
+  }
+  
   $(document).ready(function() {
 
     $('#calendar').fullCalendar({
       header: {
+    	locale: 'ko',
         left: 'prev,next today',
         center: 'title',
         right: 'month,agendaWeek,agendaDay,listWeek'
@@ -70,51 +84,34 @@ body {
       navLinks: true, // can click day/week names to navigate views
       editable: true,
       eventLimit: true, // allow "more" link when too many events
-      events: [
-        {
-          title: 'All Day Event',
-          start: '2018-07-01',
-        },
-        {
-          title: 'Long Event',
-          start: '2018-07-07',
-          end: '2018-07-10'
-        },
-        {
-          id: 999,
-          title: 'Repeating Event',
-          start: '2018-07-09T16:00:00'
-        },
-        {
-          id: 999,
-          title: 'Repeating Event',
-          start: '2018-07-16T16:00:00'
-        },
-        {
-          title: 'Meeting',
-          start: '2018-07-12T10:30:00',
-          end: '2018-07-12T12:30:00'
-        },
-        {
-          title: 'Lunch',
-          start: '2018-07-12T12:00:00'
-        },
-        {
-          title: 'Happy Hour',
-          start: '2018-07-12T17:30:00'
-        },
-        {
-          title: 'Dinner',
-          start: '2018-07-12T20:00:00'
-        },
-        {
-          title: 'Click for Google',
-          url: 'http://google.com/',
-          start: '2018-07-28'
-        }
-      ]
-    });
-
+      events:
+    	  function(start, end, timezone, callback) {
+  	  
+    	    //alert(getDate(start));
+    	    
+    	    $.ajax({
+    	      url: '${commonURL}/scheduleList.mt',
+    	      dataType: 'json',
+    	      data: {
+    	        // our hypothetical feed requires UNIX timestamps
+    	         start:getDate(start)
+    	      },
+    	      success: function(doc) {
+    	    	console.log(doc);
+    	        var events = [];
+    	        $(doc).each(function() {
+    	          events.push({
+    	            title: $(this).attr('title'),
+    	            start: $(this).attr('start') // will be parsed
+    	          });
+    	        });
+    	        console.log(events);
+    	        
+    	        callback(events);
+    	      }
+    	    });
+    	  }
+      });
   });
 
 </script>
