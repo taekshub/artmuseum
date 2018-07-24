@@ -1,7 +1,7 @@
 <%@ page language="java" 
     contentType="text/html;charset=utf-8"
     pageEncoding="utf-8"%>
-<%@page import="com.multi.myhome1.board.dto.*"%>
+<%@page import="com.multi.ArtMM.board.dto.*"%>
   
 <%@include file="../include/common.jsp"%>
 

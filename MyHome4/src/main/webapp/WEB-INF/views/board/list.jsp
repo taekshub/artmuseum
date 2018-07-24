@@ -3,8 +3,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%@page import="java.util.*"%>
-<%@page import="com.multi.myhome1.board.dto.*"%>
-<%@page import="com.multi.myhome1.common.*"%>
+<%@page import="com.multi.ArtMM.board.dto.*"%>
+<%@page import="com.multi.ArtMM.common.*"%>
 
 <%@include file="../include/common.jsp"%>
 
@@ -20,13 +20,13 @@
 
 <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500"
 	rel="stylesheet">
-<link rel="stylesheet" href="/myhome1/resources/css/styles-merged.css">
-<link rel="stylesheet" href="/myhome1/resources/css/style.min.css">
-<link rel="stylesheet" href="/myhome1/resources/css/custom.css">
-<link rel="stylesheet" href="/myhome1/resources/css/animate.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/styles-merged.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/style.min.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/custom.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/animate.css">
 <!--[if lt IE 9]>
-      <script src="/myhome1/resources/js/vendor/html5shiv.min.js"></script>
-      <script src="/myhome1/resources/js/vendor/respond.min.js"></script>
+      <script src="/ArtMM/resources/js/vendor/html5shiv.min.js"></script>
+      <script src="/ArtMM/resources/js/vendor/respond.min.js"></script>
       <script src="js/vendor/html5shiv.min.js"></script>
       <script src="js/vendor/respond.min.js"></script>
       

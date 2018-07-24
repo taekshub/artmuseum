@@ -7,21 +7,18 @@
 	<!-- 원래 클래스명은 패키지까지 포함하기때문에 너무 길어서 짧은 별명을 만들어서 접근하기 위해 기술한다 -->
 	<typeAliases>
 		<typeAlias alias="BoardDto"
-			type="com.multi.myhome1.board.dto.BoardDto" />
-		<typeAlias alias="ScoreDto"
-			type="com.multi.myhome1.score.dto.ScoreDto" />
+			type="com.multi.ArtMM.board.dto.BoardDto" />
 		<typeAlias alias="MemberDto"
-			type="com.multi.myhome1.member.dto.MemberDto" />
+			type="com.multi.ArtMM.member.dto.MemberDto" />
 		<typeAlias alias="ArtworkDto"
-			type="com.multi.myhome1.artwork.dto.ArtworkDto" />
+			type="com.multi.ArtMM.artwork.dto.ArtworkDto" />
 
 	</typeAliases>
 
 	<mappers>
-		<mapper resource="/com/multi/myhome1/board/data/Board.xml" />
-		<mapper resource="/com/multi/myhome1/score/data/Score.xml" />
-		<mapper resource="/com/multi/myhome1/member/data/Member.xml" />
-		<mapper resource="/com/multi/myhome1/artwork/data/Artwork.xml" />
+		<mapper resource="/com/multi/ArtMM/board/data/Board.xml" />
+		<mapper resource="/com/multi/ArtMM/member/data/Member.xml" />
+		<mapper resource="/com/multi/ArtMM/artwork/data/Artwork.xml" />
 	</mappers>
 
 </configuration>

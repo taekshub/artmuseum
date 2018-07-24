@@ -15,10 +15,10 @@
 <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500"
 	rel="stylesheet">
 
-<link rel="stylesheet" href="/myhome1/resources/css/styles-merged.css">
-<link rel="stylesheet" href="/myhome1/resources/css/style.min.css">
-<link rel="stylesheet" href="/myhome1/resources/css/custom.css">
-<link rel="stylesheet" href="/myhome1/resources/css/animate.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/styles-merged.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/style.min.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/custom.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/animate.css">
 
 
 <style>
@@ -31,7 +31,7 @@ body {
 	<header role="banner" class="probootstrap-header">
 
 		<div class="container-fluid">
-			<a href="/myhome1/home.mt" class="probootstrap-logo">Art Museum
+			<a href="/ArtMM/home.mt" class="probootstrap-logo">Art Museum
 				미술관<span>.</span>
 
 			</a> <a href="#" class="probootstrap-burger-menu visible-xs"><i>Menu</i></a>
@@ -39,21 +39,21 @@ body {
 
 			<nav role="navigation" class="probootstrap-nav hidden-xs">
 				<ul class="probootstrap-main-nav">
-					<li><a href="/myhome1/home.mt">메인</a></li>
-					<li><a href="/myhome1/about.mt">소개</a></li>
-					<li><a href="/myhome1/museum.mt">미술관</a>
+					<li><a href="/ArtMM/home.mt">메인</a></li>
+					<li><a href="/ArtMM/about.mt">소개</a></li>
+					<li><a href="/ArtMM/museum.mt">미술관</a>
 						<ul>
-							<li><a href="/myhome1/museum.mt">지도</a>
-							<li><a href="/myhome1/museum2.mt">그림</a>
+							<li><a href="/ArtMM/museum.mt">지도</a>
+							<li><a href="/ArtMM/museum2.mt">그림</a>
 						</ul></li>
-					<li><a href="/myhome1/artwork/list.mt">작품</a></li>
-					<li><a href="/myhome1/schedule.mt">전시일정</a></li>
-					<li><a href="/myhome1/board/list.mt">게시판</a> <!-- <li class="active"> -->
+					<li><a href="/ArtMM/artwork/list.mt">작품</a></li>
+					<li><a href="/ArtMM/schedule.mt">전시일정</a></li>
+					<li><a href="/ArtMM/board/list.mt">게시판</a> <!-- <li class="active"> -->
 						<ul>
-							<li><a href="/myhome1/board/list2.mt">Q&A</a>
-							<li><a href="/myhome1/board/list.mt">자유게시판</a>
+							<li><a href="/ArtMM/board/list2.mt">Q&A</a>
+							<li><a href="/ArtMM/board/list.mt">자유게시판</a>
 						</ul>
-					<li><a href="/myhome1/contact.mt">연락</a></li>
+					<li><a href="/ArtMM/contact.mt">연락</a></li>
 				</ul>
 				<div class="extra-text visible-xs">
 					<a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
@@ -85,16 +85,16 @@ body {
 				</div>
 
 				<div class="box" />
-				<a href="/myhome1/artwork/list.mt">게시판</a>
+				<a href="/ArtMM/artwork/list.mt">게시판</a>
 			</div> -->
 					</br> </br> </br>
 					<c:if test="${email==null || email==''}">
 						<div class="box" />
-						<a href="/myhome1/member/logon.mt">로그인&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</a>
+						<a href="/ArtMM/member/logon.mt">로그인&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</a>
 				</div>
 				&nbsp;&nbsp;
 				<div class="box" />
-				<a href="/myhome1/member/member_write.mt">회원가입&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</a>
+				<a href="/ArtMM/member/member_write.mt">회원가입&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</a>
 			</div>
 			</c:if>
 
@@ -105,7 +105,7 @@ body {
  --%>
  			   아이디 : ${member_id}&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<br>
 				<div class="box" />
-				<a href="/myhome1/member/logout.mt">로그아웃&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</a>
+				<a href="/ArtMM/member/logout.mt">로그아웃&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</a>
 		</div>
 		</c:if>
 		</div>

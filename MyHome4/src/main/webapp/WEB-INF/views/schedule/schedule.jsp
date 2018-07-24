@@ -15,17 +15,17 @@
 
 <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500"
 	rel="stylesh eet">
-<link rel="stylesheet" href="/myhome1/resources/css/styles-merged.css">
-<link rel="stylesheet" href="/myhome1/resources/css/style.min.css">
-<link rel="stylesheet" href="/myhome1/resources/css/custom.css">
-<link rel="stylesheet" href="/myhome1/resources/css/animate.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/styles-merged.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/style.min.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/custom.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/animate.css">
 
-<link href='/myhome1/resources/css/fullcalendar/fullcalendar.min.css' rel='stylesheet' />
-<link href='/myhome1/resources/css/fullcalendar/fullcalendar.print.min.css' rel='stylesheet' media='print' />
-<script src='/myhome1/resources/js/fullcalendar/moment.min.js'></script>
-<script src='/myhome1/resources/js/fullcalendar/jquery.min.js'></script>
-<script src='/myhome1/resources/js/fullcalendar/fullcalendar.min.js'></script>
-<script src='/myhome1/resources/js/fullcalendar/ko.js'></script>
+<link href='/ArtMM/resources/css/fullcalendar/fullcalendar.min.css' rel='stylesheet' />
+<link href='/ArtMM/resources/css/fullcalendar/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+<script src='/ArtMM/resources/js/fullcalendar/moment.min.js'></script>
+<script src='/ArtMM/resources/js/fullcalendar/jquery.min.js'></script>
+<script src='/ArtMM/resources/js/fullcalendar/fullcalendar.min.js'></script>
+<script src='/ArtMM/resources/js/fullcalendar/ko.js'></script>
 
 <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>

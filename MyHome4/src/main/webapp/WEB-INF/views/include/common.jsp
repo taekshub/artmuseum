@@ -2,8 +2,8 @@
 	pageEncoding="utf-8"%>
 <%
 	request.setAttribute("title", "myhome");
-	request.setAttribute("commonURL", "/myhome1");
-	String commonURL = "/myhome1";
+	request.setAttribute("commonURL", "/ArtMM");
+	String commonURL = "/ArtMM";
 	String pg = "0";
 	if (request.getParameter("pg") != null)
 		pg = request.getParameter("pg");

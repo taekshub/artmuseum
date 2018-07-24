@@ -13,15 +13,15 @@
 			</div>
 
 			<div class="box" />
-			<a href="/myhome1/board/list.mt">게시판으로 가기</a>
+			<a href="/ArtMM/board/list.mt">게시판으로 가기</a>
 		</div>
 
 		<c:if test="${email==null || email==''}">
 			<div class="box" />
-			<a href="/myhome1/member/logon.mt">로그온</a>
+			<a href="/ArtMM/member/logon.mt">로그온</a>
 	</div>
 	<div class="box" />
-	<a href="/myhome1/member/member_write.mt"> 회원가입</a>
+	<a href="/ArtMM/member/member_write.mt"> 회원가입</a>
 	</div>
 	</c:if>
 
@@ -31,7 +31,7 @@
 			모바일 : ${mobile} <br>
 			사용자아이디 : ${member_id} <br>
 		<div class="box" />
-		<a href="/myhome1/member/logout.mt">로그아웃</a>
+		<a href="/ArtMM/member/logout.mt">로그아웃</a>
 		</div>
 	</c:if>
 	</div>

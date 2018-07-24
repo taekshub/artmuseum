@@ -16,10 +16,10 @@
 
 <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500"
 	rel="stylesheet">
-<link rel="stylesheet" href="/myhome1/resources/css/styles-merged.css">
-<link rel="stylesheet" href="/myhome1/resources/css/style.min.css">
-<link rel="stylesheet" href="/myhome1/resources/css/custom.css">
-<link rel="stylesheet" href="/myhome1/resources/css/animate.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/styles-merged.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/style.min.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/custom.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/animate.css">
 
 <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>

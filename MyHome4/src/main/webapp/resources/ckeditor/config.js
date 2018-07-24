@@ -8,11 +8,11 @@ CKEDITOR.editorConfig = function( config ) {
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
 	
-	config.filebrowserBrowseUrl = '/myhome1/resources/ckfinder/ckfinder.html';
-    config.filebrowserImageBrowseUrl = '/myhome1/resources/ckfinder/ckfinder.html?type=Images';
-    config.filebrowserFlashBrowseUrl = '/myhome1/resources/ckfinder/ckfinder.html?type=Flash';
-    config.filebrowserUploadUrl = '/myhome1/resources/ckfinder/core/connector/java/connector.java?command=QuickUpload&type=Files';
-    config.filebrowserImageUploadUrl = '/myhome1/resources/ckfinder/core/connector/java/connector.java?command=QuickUpload&type=Images';
-    config.filebrowserFlashUploadUrl = '/myhome1/resources/ckfinder/core/connector/java/connector.java?command=QuickUpload&type=Flash';
+	config.filebrowserBrowseUrl = '/ArtMM/resources/ckfinder/ckfinder.html';
+    config.filebrowserImageBrowseUrl = '/ArtMM/resources/ckfinder/ckfinder.html?type=Images';
+    config.filebrowserFlashBrowseUrl = '/ArtMM/resources/ckfinder/ckfinder.html?type=Flash';
+    config.filebrowserUploadUrl = '/ArtMM/resources/ckfinder/core/connector/java/connector.java?command=QuickUpload&type=Files';
+    config.filebrowserImageUploadUrl = '/ArtMM/resources/ckfinder/core/connector/java/connector.java?command=QuickUpload&type=Images';
+    config.filebrowserFlashUploadUrl = '/ArtMM/resources/ckfinder/core/connector/java/connector.java?command=QuickUpload&type=Flash';
 
 };

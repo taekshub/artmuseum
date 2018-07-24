@@ -13,7 +13,7 @@
 	<!-- 트랜잭션 / 설정하기 expression 이 부분에서 호출될 클래스와 함수 이름 지정하기 -->
 	<aop:config proxy-target-class="true">
 		<aop:pointcut id="txAdvisePointCut"
-			expression="execution(public * com.multi.myhome1..service.*ServiceImpl.*(..))" />
+			expression="execution(public * com.multi.ArtMM..service.*ServiceImpl.*(..))" />
 		<aop:advisor id="transactionAdvisor"
 			pointcut-ref="txAdvisePointCut" advice-ref="txAdvice" />
 	</aop:config>
@@ -46,7 +46,7 @@
 	<!-- @Controller, @Service, @Repository @Autowired base-package 아래에 있는 모든 
 		클래스 찾아서 객체를 만들어준다 -->
 	<context:component-scan
-		base-package="com.multi.myhome1" />
+		base-package="com.multi.ArtMM" />
 
 
 	<beans:bean id="multipartResolver"
@@ -71,12 +71,12 @@
 			<exclude-mapping path="/board/list.mt" />
 			<exclude-mapping path="/member/*" />
 			<beans:bean
-				class="com.multi.myhome1.common.LoginInterceptor" />
+				class="com.multi.ArtMM.common.LoginInterceptor" />
 		</interceptor>
 	</interceptors>
 
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 	<beans:bean id="loggerAspect"
-		class="com.multi.myhome1.common.MyLogger" />
+		class="com.multi.ArtMM.common.MyLogger" />
 
 </beans:beans>

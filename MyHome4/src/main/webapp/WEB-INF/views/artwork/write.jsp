@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html;charset=utf-8"
 	pageEncoding="utf-8"%>
-<%@page import="com.multi.myhome1.artwork.dto.*"%>
+<%@page import="com.multi.ArtMM.artwork.dto.*"%>
 <%@page import="java.util.*"%>
 
 <%@include file="../include/common.jsp"%>

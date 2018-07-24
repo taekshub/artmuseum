@@ -2,8 +2,8 @@
 	pageEncoding="utf-8"%>
 <%
 	request.setAttribute("title", "게시판");
-	request.setAttribute("commonURL", "/myhome1");
-	String commonURL = "/myhome1";
+	request.setAttribute("commonURL", "/ArtMM");
+	String commonURL = "/ArtMM";
 	String pg = "0";
 	if (request.getParameter("pg") != null)
 		pg = request.getParameter("pg");
@@ -26,12 +26,12 @@
 
 <!-- <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500"
 	rel="stylesheet">
-<link rel="stylesheet" href="/myhome1/resources/css/styles-merged.css">
-<link rel="stylesheet" href="/myhome1/resources/css/style.min.css">
-<link rel="stylesheet" href="/myhome1/resources/css/custom.css">
-<link rel="stylesheet" href="/myhome1/resources/css/animate.css">
-<script src="/myhome1/resources/js/scripts.min.js"></script>
-<script src="/myhome1/resources/js/main.min.js"></script>
-<script src="/myhome1/resources/js/custom.js"></script> -->
+<link rel="stylesheet" href="/ArtMM/resources/css/styles-merged.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/style.min.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/custom.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/animate.css">
+<script src="/ArtMM/resources/js/scripts.min.js"></script>
+<script src="/ArtMM/resources/js/main.min.js"></script>
+<script src="/ArtMM/resources/js/custom.js"></script> -->
 
 </head>

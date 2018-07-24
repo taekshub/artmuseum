@@ -2,8 +2,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
     
 <%@page import="java.util.*"%>
-<%@page import="com.multi.myhome1.artwork.dto.*"%>
-<%@page import="com.multi.myhome1.common.*"%>
+<%@page import="com.multi.ArtMM.artwork.dto.*"%>
+<%@page import="com.multi.ArtMM.common.*"%>
 
 <%@include file="../include/common.jsp"%>
 

@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.multi.myhome1">
+	<logger name="com.multi.ArtMM">
 		<level value="info" />
 	</logger>
 	
@@ -46,7 +46,7 @@
     	<level value="debug"/>
     </logger>
     
-    <logger name="com.multi.myhome1.common.MyLogger">
+    <logger name="com.multi.ArtMM.common.MyLogger">
     	<level value="debug"/>
     </logger>
     

@@ -15,14 +15,14 @@
 
 <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500"
 	rel="stylesheet">
-<link rel="stylesheet" href="/myhome1/resources/css/styles-merged.css">
-<link rel="stylesheet" href="/myhome1/resources/css/style.min.css">
-<link rel="stylesheet" href="/myhome1/resources/css/custom.css">
-<link rel="stylesheet" href="/myhome1/resources/css/animate.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/styles-merged.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/style.min.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/custom.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/animate.css">
 
 <!--[if lt IE 9]>
-      <script src="/myhome1/resources/js/vendor/html5shiv.min.js"></script>
-      <script src="/myhome1/resources/js/vendor/respond.min.js"></script>
+      <script src="/ArtMM/resources/js/vendor/html5shiv.min.js"></script>
+      <script src="/ArtMM/resources/js/vendor/respond.min.js"></script>
     <![endif]-->
 
 </head>
@@ -42,7 +42,7 @@ body {
 
 	<!-- START: section -->
 	<section class="probootstrap-intro"
-		style="background-image: url(/myhome1/resources/img/서울시립미술관_본관.jpg);"
+		style="background-image: url(/ArtMM/resources/img/서울시립미술관_본관.jpg);"
 		data-stellar-background-ratio="0.5">
 		<div class="container-fluid">
 			<div class="row">
@@ -82,7 +82,7 @@ body {
 				<div class="row probootstrap-gutter0">
 					<div class="col-md-4 col-sm-6">
 						<a href="portfolio-single.html" class="probootstrap-hover-overlay">
-							<img src="/myhome1/resources/img/img_1.jpg"
+							<img src="/ArtMM/resources/img/img_1.jpg"
 							alt="Free Bootstrap Template by uicookies.com"
 							class="img-responsive">
 							<div class="probootstrap-text-overlay">
@@ -93,7 +93,7 @@ body {
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<a href="portfolio-single.html" class="probootstrap-hover-overlay">
-							<img src="/myhome1/resources/img/img_2.jpg"
+							<img src="/ArtMM/resources/img/img_2.jpg"
 							alt="Free Bootstrap Template by uicookies.com"
 							class="img-responsive">
 							<div class="probootstrap-text-overlay">
@@ -104,7 +104,7 @@ body {
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<a href="portfolio-single.html" class="probootstrap-hover-overlay">
-							<img src="/myhome1/resources/img/img_3.jpg"
+							<img src="/ArtMM/resources/img/img_3.jpg"
 							alt="Free Bootstrap Template by uicookies.com"
 							class="img-responsive">
 							<div class="probootstrap-text-overlay">
@@ -115,7 +115,7 @@ body {
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<a href="portfolio-single.html" class="probootstrap-hover-overlay">
-							<img src="/myhome1/resources/img/img_4.jpg"
+							<img src="/ArtMM/resources/img/img_4.jpg"
 							alt="Free Bootstrap Template by uicookies.com"
 							class="img-responsive">
 							<div class="probootstrap-text-overlay">
@@ -126,7 +126,7 @@ body {
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<a href="portfolio-single.html" class="probootstrap-hover-overlay">
-							<img src="/myhome1/resources/img/img_5.jpg"
+							<img src="/ArtMM/resources/img/img_5.jpg"
 							alt="Free Bootstrap Template by uicookies.com"
 							class="img-responsive">
 							<div class="probootstrap-text-overlay">
@@ -137,7 +137,7 @@ body {
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<a href="portfolio-single.html" class="probootstrap-hover-overlay">
-							<img src="/myhome1/resources/img/img_6.jpg"
+							<img src="/ArtMM/resources/img/img_6.jpg"
 							alt="Free Bootstrap Template by uicookies.com"
 							class="img-responsive">
 							<div class="probootstrap-text-overlay">
@@ -256,7 +256,7 @@ body {
 					<div class="col-md-4 probootstrap-animate">
 						<div class="probootstrap-block-image">
 							<figure>
-								<a href="#"><img src="/myhome1/resources/img/img_1.jpg"
+								<a href="#"><img src="/ArtMM/resources/img/img_1.jpg"
 									alt="Free Bootstrap Template by uicookies.com"></a>
 							</figure>
 							<div class="text">
@@ -284,7 +284,7 @@ body {
 					<div class="col-md-4 probootstrap-animate">
 						<div class="probootstrap-block-image">
 							<figure>
-								<img src="/myhome1/resources/img/img_2.jpg"
+								<img src="/ArtMM/resources/img/img_2.jpg"
 									alt="Free Bootstrap Template by uicookies.com">
 							</figure>
 							<div class="text">
@@ -312,7 +312,7 @@ body {
 					<div class="col-md-4 probootstrap-animate">
 						<div class="probootstrap-block-image">
 							<figure>
-								<img src="/myhome1/resources/img/img_3.jpg"
+								<img src="/ArtMM/resources/img/img_3.jpg"
 									alt="Free Bootstrap Template by uicookies.com">
 							</figure>
 							<div class="text">
@@ -458,9 +458,9 @@ body {
 		<!-- END: footer -->
 
 
-		<script src="/myhome1/resources/js/scripts.min.js"></script>
-		<script src="/myhome1/resources/js/main.min.js"></script>
-		<script src="/myhome1/resources/js/custom.js"></script>
+		<script src="/ArtMM/resources/js/scripts.min.js"></script>
+		<script src="/ArtMM/resources/js/main.min.js"></script>
+		<script src="/ArtMM/resources/js/custom.js"></script>
 </body>
 </html>
 

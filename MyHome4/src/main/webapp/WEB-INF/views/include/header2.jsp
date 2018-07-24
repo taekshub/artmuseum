@@ -15,10 +15,10 @@
 <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500"
 	rel="stylesheet">
 
-<link rel="stylesheet" href="/myhome1/resources/css/styles-merged.css">
-<link rel="stylesheet" href="/myhome1/resources/css/style.min.css">
-<link rel="stylesheet" href="/myhome1/resources/css/custom.css">
-<link rel="stylesheet" href="/myhome1/resources/css/animate.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/styles-merged.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/style.min.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/custom.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/animate.css">
 
 
 <style>
@@ -31,20 +31,20 @@ body {
 	<!-- header S -->
 	<header role="banner" class="probootstrap-header">
 		<div class="container-fluid">
-			<a href="/myhome1/home.mt" class="probootstrap-logo">Art Museum 미술관<span>.</span></a>
+			<a href="/ArtMM/home.mt" class="probootstrap-logo">Art Museum 미술관<span>.</span></a>
 
 			<a href="#" class="probootstrap-burger-menu visible-xs"><i>Menu</i></a>
 			<div class="mobile-menu-overlay"></div>
 
 			<nav role="navigation" class="probootstrap-nav hidden-xs">
 				<ul class="probootstrap-main-nav">
-					<li><a href="/myhome1/home.mt">메인</a></li>
-					<li><a href="/myhome1/about.mt">소개</a></li>
-					<li><a href="/myhome1/museum.mt">미술관</a></li>
-					<li><a href="/myhome1/artwork.mt">작품</a></li>
-					<li><a href="/myhome1/schedule.mt">전시일정</a></li>
-					<li class="active"><a href="/myhome1/board/list.mt">게시판</a></li>
-					<li><a href="/myhome1/contact.mt">연락</a></li>
+					<li><a href="/ArtMM/home.mt">메인</a></li>
+					<li><a href="/ArtMM/about.mt">소개</a></li>
+					<li><a href="/ArtMM/museum.mt">미술관</a></li>
+					<li><a href="/ArtMM/artwork.mt">작품</a></li>
+					<li><a href="/ArtMM/schedule.mt">전시일정</a></li>
+					<li class="active"><a href="/ArtMM/board/list.mt">게시판</a></li>
+					<li><a href="/ArtMM/contact.mt">연락</a></li>
 				</ul>
 				<div class="extra-text visible-xs">
 					<a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>

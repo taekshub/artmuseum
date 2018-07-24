@@ -4,8 +4,8 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
 <%@page import="java.util.*"%>
-<%@page import="com.multi.myhome1.artwork.dto.*"%>
-<%@page import="com.multi.myhome1.common.*"%>
+<%@page import="com.multi.ArtMM.artwork.dto.*"%>
+<%@page import="com.multi.ArtMM.common.*"%>
 
 <%@include file="../include/common.jsp"%>
 
@@ -21,14 +21,14 @@
 
 <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500"
 	rel="stylesheet">
-<link rel="stylesheet" href="/myhome1/resources/css/styles-merged.css">
-<link rel="stylesheet" href="/myhome1/resources/css/style.min.css">
-<link rel="stylesheet" href="/myhome1/resources/css/custom.css">
-<link rel="stylesheet" href="/myhome1/resources/css/animate.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/styles-merged.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/style.min.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/custom.css">
+<link rel="stylesheet" href="/ArtMM/resources/css/animate.css">
 
 <!--[if lt IE 9]>
-      <script src="/myhome1/resources/js/vendor/html5shiv.min.js"></script>
-      <script src="/myhome1/resources/js/vendor/respond.min.js"></script>
+      <script src="/ArtMM/resources/js/vendor/html5shiv.min.js"></script>
+      <script src="/ArtMM/resources/js/vendor/respond.min.js"></script>
       <script src="js/vendor/html5shiv.min.js"></script>
       <script src="js/vendor/respond.min.js"></script>
       
@@ -146,7 +146,7 @@ body {
 									style="width: 160px; height: 200px;" /></a></td>
 							<td>
 								<table style="width: 100%">
-									<tr class="tr">
+									<tr class="tr"></br>
 										<td class="list"><strong>[작품명] : </strong> <a
 											href="<%=url%>"><%=item.getTitle()%></a></td>
 									</tr>
@@ -165,7 +165,7 @@ body {
 									<tr>
 										<td class="list"><strong>[제작연도] : </strong><a
 											href="<%=url%>"><%=item.getCreated()%></a></td>
-									</tr>
+									</tr></br>
 								</table>
 							</td>
 						</tr>
@@ -185,7 +185,7 @@ body {
 					<!-- pagination S -->
 					<div class="pg">
 
-						<%=Pager.makeTag(request, 10, total)%>
+						<%=Pager.makeTag(request, 5, total)%>
 					</div>
 					<!-- pagination E -->
 
