@@ -30,6 +30,8 @@ public class DownController {
 		
 		if( id.equals("board"))
 			path = ctx.getRealPath(CommonConst.BOARD_PATH);
+		else if( id.equals("artwork"))
+			path = ctx.getRealPath(CommonConst.ARTWORK_PATH);
 		System.out.println(path);
 		
 		

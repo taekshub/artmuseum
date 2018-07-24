@@ -146,7 +146,7 @@ body {
 									style="width: 160px; height: 200px;" /></a></td>
 							<td>
 								<table style="width: 100%">
-									<tr class="tr"></br>
+									<tr class="tr">
 										<td class="list"><strong>[작품명] : </strong> <a
 											href="<%=url%>"><%=item.getTitle()%></a></td>
 									</tr>
@@ -165,7 +165,7 @@ body {
 									<tr>
 										<td class="list"><strong>[제작연도] : </strong><a
 											href="<%=url%>"><%=item.getCreated()%></a></td>
-									</tr></br>
+									</tr>
 								</table>
 							</td>
 						</tr>

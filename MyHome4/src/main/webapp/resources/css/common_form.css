@@ -35,7 +35,7 @@ table.bdl thead tr th.last   { background:none; }
 table.bdl thead tr th img   { margin-bottom:2px; }
 table.bdl tbody tr td   { font-size:15px; }
 table.bdl tbody tr td.list   {text-align:left;padding-left:15px; }
-table.bdl tbody tr th, table.bdl tbody tr td   { padding:5px 10px; font-family:verdana; letter-spacing:0; border-bottom:solid 1px #ddd; border-right:none; background:none; }
+table.bdl tbody tr th, table.bdl tbody tr td   { padding:20px 10px; font-family:verdana; letter-spacing:0; border-bottom:solid 1px #ddd; border-right:none; background:none; }
 table.bdl tbody tr.even th, table.bdl tbody tr.even td   { background-color:#fafafa; }
 table.bdl tbody tr.end th, table.bdl tbody tr.end td   { border-bottom:none; }
 table.bdl tbody tr.reply th, table.bdl tbody tr.reply td   { background-color:#eaeaea; }

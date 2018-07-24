@@ -97,7 +97,7 @@
 
 
 
-	<!-- 삭제용 -->
+	<!-- 시져용 -->
 	<update id="Like.delete" parameterType="LikeDto">
 		update	tl_question_answer
 		set delyn='Y'
