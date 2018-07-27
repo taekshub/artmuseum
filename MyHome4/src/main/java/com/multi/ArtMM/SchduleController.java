@@ -26,8 +26,10 @@ public class SchduleController {
 		{
 			HashMap map = new HashMap();
 			map.put("title", "놀러가는날");
-			map.put("start", "2018-07-18");
+			map.put("start", "2018-07-18T10:00-18:00");
+			map.put("end", "2018-07-20T11:00-20:00");
 			list.add(map);
+			
 		
 			map = new HashMap();
 			map.put("title", "놀러가는날2");

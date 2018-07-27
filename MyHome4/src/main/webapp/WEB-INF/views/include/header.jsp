@@ -103,7 +103,7 @@ body {
 			이메일 : ${email} <br>
 			모바일 : ${mobile} <br>
  --%>
- 			   아이디 : ${member_id}&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<br>
+ 			   이름 : ${username}&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<br>
 				<div class="box" />
 				<a href="/ArtMM/member/logout.mt">로그아웃&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</a>
 		</div>

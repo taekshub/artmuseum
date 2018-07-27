@@ -40,165 +40,82 @@ body {
 
 
 	<!-- START: section -->
-	<section class="probootstrap-intro"
-		style="background-image: url(img/hero_bg_2.jpg);"
-		data-stellar-background-ratio="0.5">
-		<div class="container-fluid">
-			<div class="row">
-				<p align="center">
-					<iframe
-						src="https://www.google.com/maps/d/embed?mid=1mk6wwiBOp5ARRCBeq9OZBXth607Qq-b0"
-						width="1024" height="768"></iframe>
+		<section id="next-section">
+			<div class="container-fluid">
+				<div class="row probootstrap-gutter0">
+					<div class="col-md-4 col-sm-6">
+						<a href="portfolio-single.html" class="probootstrap-hover-overlay">
+							<img src="/ArtMM/resources/img/img_1.jpg"
+							alt="Free Bootstrap Template by uicookies.com"
+							class="img-responsive">
+							<div class="probootstrap-text-overlay">
+								<h3>Beautiful Office</h3>
+								<p>Website, Photography</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<a href="portfolio-single.html" class="probootstrap-hover-overlay">
+							<img src="/ArtMM/resources/img/img_2.jpg"
+							alt="Free Bootstrap Template by uicookies.com"
+							class="img-responsive">
+							<div class="probootstrap-text-overlay">
+								<h3>Drawning In The Blue Water</h3>
+								<p>Website, Photography</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<a href="portfolio-single.html" class="probootstrap-hover-overlay">
+							<img src="/ArtMM/resources/img/img_3.jpg"
+							alt="Free Bootstrap Template by uicookies.com"
+							class="img-responsive">
+							<div class="probootstrap-text-overlay">
+								<h3>Prominent Building</h3>
+								<p>Website, Photography</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<a href="portfolio-single.html" class="probootstrap-hover-overlay">
+							<img src="/ArtMM/resources/img/img_4.jpg"
+							alt="Free Bootstrap Template by uicookies.com"
+							class="img-responsive">
+							<div class="probootstrap-text-overlay">
+								<h3>Pink Lips</h3>
+								<p>Website, Photography</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<a href="portfolio-single.html" class="probootstrap-hover-overlay">
+							<img src="/ArtMM/resources/img/img_5.jpg"
+							alt="Free Bootstrap Template by uicookies.com"
+							class="img-responsive">
+							<div class="probootstrap-text-overlay">
+								<h3>House With Orange Window</h3>
+								<p>Website, Photography</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<a href="portfolio-single.html" class="probootstrap-hover-overlay">
+							<img src="/ArtMM/resources/img/img_6.jpg"
+							alt="Free Bootstrap Template by uicookies.com"
+							class="img-responsive">
+							<div class="probootstrap-text-overlay">
+								<h3>Explorer Guy In The East</h3>
+								<p>Website, Photography</p>
+							</div>
+						</a>
+					</div>
+
+				</div>
 			</div>
-
-		</div>
-		</div>
-		</div>
-
-	</section>
+		</section>
 	<!-- END: section -->
 
 
-	<section id="next-section">
-		<div class="container-fluid">
-			<div class="row probootstrap-gutter0">
-				<div class="col-md-4 col-sm-6">
-					<a href="portfolio-single.html" class="probootstrap-hover-overlay">
-						<img src="img/img_1.jpg"
-						alt="Free Bootstrap Template by uicookies.com"
-						class="img-responsive">
-						<div class="probootstrap-text-overlay">
-							<h3>Beautiful Office</h3>
-							<p>Website, Photography</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<a href="portfolio-single.html" class="probootstrap-hover-overlay">
-						<img src="img/img_2.jpg"
-						alt="Free Bootstrap Template by uicookies.com"
-						class="img-responsive">
-						<div class="probootstrap-text-overlay">
-							<h3>Drawning In The Blue Water</h3>
-							<p>Website, Photography</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<a href="portfolio-single.html" class="probootstrap-hover-overlay">
-						<img src="img/img_3.jpg"
-						alt="Free Bootstrap Template by uicookies.com"
-						class="img-responsive">
-						<div class="probootstrap-text-overlay">
-							<h3>Prominent Building</h3>
-							<p>Website, Photography</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<a href="portfolio-single.html" class="probootstrap-hover-overlay">
-						<img src="img/img_4.jpg"
-						alt="Free Bootstrap Template by uicookies.com"
-						class="img-responsive">
-						<div class="probootstrap-text-overlay">
-							<h3>Pink Lips</h3>
-							<p>Website, Photography</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<a href="portfolio-single.html" class="probootstrap-hover-overlay">
-						<img src="img/img_5.jpg"
-						alt="Free Bootstrap Template by uicookies.com"
-						class="img-responsive">
-						<div class="probootstrap-text-overlay">
-							<h3>House With Orange Window</h3>
-							<p>Website, Photography</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<a href="portfolio-single.html" class="probootstrap-hover-overlay">
-						<img src="img/img_6.jpg"
-						alt="Free Bootstrap Template by uicookies.com"
-						class="img-responsive">
-						<div class="probootstrap-text-overlay">
-							<h3>Explorer Guy In The East</h3>
-							<p>Website, Photography</p>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-md-4 col-sm-6">
-					<a href="portfolio-single.html" class="probootstrap-hover-overlay">
-						<img src="img/img_1.jpg"
-						alt="Free Bootstrap Template by uicookies.com"
-						class="img-responsive">
-						<div class="probootstrap-text-overlay">
-							<h3>Beautiful Office</h3>
-							<p>Website, Photography</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<a href="portfolio-single.html" class="probootstrap-hover-overlay">
-						<img src="img/img_2.jpg"
-						alt="Free Bootstrap Template by uicookies.com"
-						class="img-responsive">
-						<div class="probootstrap-text-overlay">
-							<h3>Drawning In The Blue Water</h3>
-							<p>Website, Photography</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<a href="portfolio-single.html" class="probootstrap-hover-overlay">
-						<img src="img/img_3.jpg"
-						alt="Free Bootstrap Template by uicookies.com"
-						class="img-responsive">
-						<div class="probootstrap-text-overlay">
-							<h3>Prominent Building</h3>
-							<p>Website, Photography</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<a href="portfolio-single.html" class="probootstrap-hover-overlay">
-						<img src="img/img_4.jpg"
-						alt="Free Bootstrap Template by uicookies.com"
-						class="img-responsive">
-						<div class="probootstrap-text-overlay">
-							<h3>Pink Lips</h3>
-							<p>Website, Photography</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<a href="portfolio-single.html" class="probootstrap-hover-overlay">
-						<img src="img/img_5.jpg"
-						alt="Free Bootstrap Template by uicookies.com"
-						class="img-responsive">
-						<div class="probootstrap-text-overlay">
-							<h3>House With Orange Window</h3>
-							<p>Website, Photography</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<a href="portfolio-single.html" class="probootstrap-hover-overlay">
-						<img src="img/img_6.jpg"
-						alt="Free Bootstrap Template by uicookies.com"
-						class="img-responsive">
-						<div class="probootstrap-text-overlay">
-							<h3>Explorer Guy In The East</h3>
-							<p>Website, Photography</p>
-						</div>
-					</a>
-				</div>
-
-			</div>
-		</div>
-	</section>
 
 
 
